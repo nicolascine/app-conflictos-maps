@@ -1,0 +1,51 @@
+//wrapper footer layout
+.footer-timeline {
+    bottom: 0;
+    width: 100%;
+    z-index: 10000;
+    position: fixed;
+    .panel-group {
+        margin: 0px;
+    }
+    .panel-default > .panel-heading {
+        background: white;
+        position: relative;
+        &:after {
+            top: 6px;
+            left: 10px;
+            width: 10px;
+            height: 10px;
+            content: "\f106";
+            position: absolute;
+            font: normal normal normal 14px/1 FontAwesome;
+        }
+    }
+    .panel-heading {
+        padding: 0;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .panel-group .panel {
+        border-radius: 0;
+    }
+    .panel-title a {
+        width: 100%;
+        color: white;
+        height: 35px;
+        outline: none;
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        padding: 10px 15px;
+    }
+    .panel-title a:hover,
+    .panel-title a:focus,
+    .panel-title a:active {
+        outline: none;
+        text-decoration: none;
+    }
+    /* ---- Timeline ---- */
+    .box-timeline {
+        height: 80px;
+    }
+}
