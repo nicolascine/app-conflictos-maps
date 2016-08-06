@@ -20,13 +20,6 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
     padding: 0.2em 0;
 }
 
-.thumbnail {
-    height: 200px;
-    img.pull-right {
-        width: 50px;
-    }
-}
-
 
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
@@ -35,95 +28,211 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 
 // injector
 // endinjector
+body {
+    overflow-x: hidden;
+}
+
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 250px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+#menu-toggle {
+    z-index: 100000;
+    position: absolute;
+}
+
 .angular-google-map-container {
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
     z-index: 35;
 }
 
-body {
-    overflow: hidden;
-}
-
-.navbar-offset {
-    margin-top: 50px;
-}
-
-#map {
-    position: absolute;
-    top: 50px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
-
-#map .ol-zoom {
-    font-size: 1.2em;
-}
-
-.zoom-top-opened-sidebar {
-    margin-top: 5px;
-}
-
-.zoom-top-collapsed {
-    margin-top: 45px;
-}
-
-.mini-submenu {
-    display: none;
-    background-color: transparent;
-    border: 1px solid #a5a5a5;
-    border-radius: 4px;
-    padding: 9px;
-    padding: 9px;
-    /*position: relative;*/
-    width: 42px;
-    text-align: center;
-}
-
-.mini-submenu-left {
-    position: absolute;
-    top: 103px;
-    left: 10px;
-    z-index: 40;
-}
-
-.sidebar {
-    overflow-y: scroll;
-    height: 100vh;
-    z-index: 45;
-    background-color: rgba(255, 255, 255, 1);
-    -webkit-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-    -moz-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-    -o-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-    transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-    box-shadow: -4px 0px 9px 2px;
-}
-
-.main-row {
-    position: relative;
-    top: 0;
-}
-
-.mini-submenu:hover {
-    cursor: pointer;
-}
-
-.collapsible-button {
-    display: block;
-    overflow: hidden;
-    text-align: right;
-    padding: 20px 0px;
-    width: 100%;
-}
-
-.slide-submenu {
-    background: white;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
-}
+// body {
+//     overflow: hidden;
+// }
+// .navbar-offset {
+//     margin-top: 50px;
+// }
+// #map {
+//     position: absolute;
+//     top: 50px;
+//     bottom: 0px;
+//     left: 0px;
+//     right: 0px;
+// }
+// #map .ol-zoom {
+//     font-size: 1.2em;
+// }
+// .zoom-top-opened-sidebar {
+//     margin-top: 5px;
+// }
+// .zoom-top-collapsed {
+//     margin-top: 45px;
+// }
+// .mini-submenu {
+//     display: none;
+//     background-color: transparent;
+//     border: 1px solid #a5a5a5;
+//     border-radius: 4px;
+//     padding: 9px;
+//     padding: 9px;
+//     /*position: relative;*/
+//     width: 42px;
+//     text-align: center;
+// }
+// .mini-submenu-left {
+//     position: absolute;
+//     top: 103px;
+//     left: 10px;
+//     z-index: 40;
+// }
+// .sidebar {
+//     overflow-y: scroll;
+//     height: 100vh;
+//     z-index: 45;
+//     background-color: rgba(255, 255, 255, 1);
+//     -webkit-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
+//     -moz-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
+//     -o-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
+//     transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
+//     box-shadow: -4px 0px 9px 2px;
+// }
+// .main-row {
+//     position: relative;
+//     top: 0;
+// }
+// .mini-submenu:hover {
+//     cursor: pointer;
+// }
+// .collapsible-button {
+//     display: block;
+//     overflow: hidden;
+//     text-align: right;
+//     padding: 20px 0px;
+//     width: 100%;
+// }
+// .slide-submenu {
+//     background: white;
+//     display: inline-block;
+//     padding: 10px;
+//     border-radius: 4px;
+//     cursor: pointer;
+// }

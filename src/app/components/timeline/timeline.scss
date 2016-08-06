@@ -47,5 +47,61 @@
     /* ---- Timeline ---- */
     .box-timeline {
         height: 80px;
+        ul {
+            display: inline;
+            li {
+                display: none;
+                margin-left: 100px;
+                &.hour-0700 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-0800 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-0900 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1000 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1100 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1200 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1300 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1400 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1500 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1600 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1700 {
+                    color: red;
+                    display: inline;
+                }
+                &.hour-1800 {
+                    color: red;
+                    display: inline;
+                }
+            }
+        }
+
     }
 }

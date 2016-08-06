@@ -1,25 +1,30 @@
 export function TimelineDirective() {
-  'ngInject';
+    'ngInject';
 
-  let directive = {
-    restrict: 'E',
-    templateUrl: 'app/components/timeline/timeline.html',
-    scope: {
-        creationDate: '='
-    },
-    controller: timelineController,
-    controllerAs: 'vm',
-    bindToController: true
-  };
+    let directive = {
+        restrict: 'E',
+        templateUrl: 'app/components/timeline/timeline.html',
+        scope: {
+            allPoints: '='
+        },
+        controller: timelineController,
+        controllerAs: 'vm',
+        bindToController: true
+    };
 
-  return directive;
+    return directive;
 }
 
 class timelineController {
-  constructor (moment) {
-    'ngInject';
+    constructor() {
+        'ngInject';
 
-    // "this.creationDate" is available by directive option "bindToController: true"
-    this.relativeDate = moment(this.creationDate).fromNow();
-  }
+        // "this.creationDate" is available by directive option "bindToController: true"
+        this.points = this.allPoints
+    }
+
+    getClassName(hour) {
+        let className = hour.replace(":", "")
+        return 'hour-' + className
+    }
 }

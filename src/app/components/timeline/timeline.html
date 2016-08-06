@@ -1,7 +1,9 @@
 <uib-accordion close-others="oneAtATime" class="footer-timeline">
     <div uib-accordion-group class="panel-default" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
         <div class="box-timeline">
-            . . . timeline ~
+            <ul class="points">
+                <li ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">{{point.hour}}</li>
+            </ul>
         </div>
     </div>
 </uib-accordion>
