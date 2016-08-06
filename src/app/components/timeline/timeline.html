@@ -10,7 +10,7 @@
         <div class="box-timeline">
             <ul class="timeline" id="timeline">
                <!-- <li ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">{{point.hour}}</li>-->
-                <li class="li complete" ng-repeat="point in vm.points">
+                <li class="li complete" ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">
                     <!--<div class="timestamp">
                         <span class="date">{{point.hour}}<span>
                   </div>-->

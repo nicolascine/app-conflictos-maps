@@ -53,61 +53,6 @@
         height: 100px;
         overflow-y: scroll;
         padding-top: 40px;
-        // ul {
-        //     display: inline;
-        //     li {
-        //         display: none;
-        //         margin-left: 100px;
-        //         &.hour-0700 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-0800 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-0900 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1000 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1100 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1200 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1300 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1400 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1500 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1600 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1700 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //         &.hour-1800 {
-        //             color: red;
-        //             display: inline;
-        //         }
-        //     }
-        // }
         //steps
         .timeline {
             list-style-type: none;
@@ -129,29 +74,53 @@
             font-weight: 100;
         }
         .status {
-            padding: 0px 40px;
             display: flex;
-            justify-content: initial;
-            border-top: 2px solid #D6DCE0;
             position: relative;
+            justify-content: initial;
+            padding: 0px 7px 0px 3px;
+            border-top: 2px solid #D6DCE0;
             transition: all 200ms ease-in;
+            margin-bottom: 39px;
         }
         .status h4 {
             font-weight: 600;
+            display: none;
         }
         .status:before {
             content: "";
-            width: 25px;
-            height: 25px;
+            width: 6px;
+            height: 6px;
             background-color: white;
-            border-radius: 25px;
+            border-radius: 6px;
             border: 1px solid #ddd;
             position: absolute;
             top: -15px;
             left: 42%;
             transition: all 200ms ease-in;
         }
-        .li.complete .status {
+        li.hour-0700 .status,
+        li.hour-0800 .status,
+        li.hour-0900 .status,
+        li.hour-1000 .status,
+        li.hour-1100 .status,
+        li.hour-1200 .status,
+        li.hour-1300 .status,
+        li.hour-1400 .status,
+        li.hour-1500 .status,
+        li.hour-1600 .status,
+        li.hour-1700 .status,
+        li.hour-1800 .status {
+            margin-bottom: 0px;
+            &:before {
+                width: 25px;
+                height: 25px;
+                border-radius: 25px;
+            }
+            h4 {
+                display: inline;
+            }
+        }
+        a .li.complete .status {
             border-top: 2px solid #d7dad8;
         }
         .li.complete .status:before {
