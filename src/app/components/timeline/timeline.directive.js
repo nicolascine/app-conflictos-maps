@@ -6,7 +6,8 @@ export function TimelineDirective() {
         templateUrl: 'app/components/timeline/timeline.html',
         scope: {
             allPoints: '=',
-            itemClick: '='
+            itemClick: '=',
+            map: '='
         },
         controller: timelineController,
         controllerAs: 'vm',

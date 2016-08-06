@@ -35,6 +35,8 @@ export class MainController {
             }
         }
 
+        // Recorrido Marcha <----------------------------|
+
         this.locations = [{
             "latitude": -33.043737,
             "longitude": -71.622888
@@ -62,29 +64,70 @@ export class MainController {
             _.mapValues(point.markers, (mark) => {
                 if (mark.lat && mark.lon) {
                     var marker = {
-                        id: Date.now(),
-                        coords: {
-                            latitude: mark.lat,
-                            longitude: mark.lon
-                        },
-                        type: mark.type,
-                        options: {
-                            icon: {
-                                url: 'assets/images/' + mark.type + '.png',
-                                anchor: new google.maps.Point(25, 50),
-                                scaledSize: new google.maps.Size(40, 50)
-                            }
-                        },
-                    }
-                    //console.log(marker)
+                            id: Date.now(),
+                            coords: {
+                                latitude: mark.lat,
+                                longitude: mark.lon
+                            },
+                            type: mark.type,
+                            options: {
+                                icon: {
+                                    url: 'assets/images/' + mark.type + '.png',
+                                    anchor: new google.maps.Point(25, 50),
+                                    scaledSize: new google.maps.Size(40, 50)
+                                }
+                            },
+                        }
+                        //console.log(marker)
                     this.map.markers.push(marker)
                 }
             })
         })
     }
 
-    setPointOnMap(hour){
-      console.log(hour)
+    setPointOnMap(hour) {
+        this.map.markers = []
+
+        function toSeconds(t) {
+            var bits = t.split(':')
+            return bits[0] * 3600 + bits[1] * 60 + bits[2] * 1
+        }
+        _.mapValues(this.points, (point) => {
+            let initial = toSeconds(hour + ':00')
+            let compare = toSeconds(point.hour + ':00')
+            console.log( initial, compare)
+            if (compare == initial ) {
+                // console.log(hour)
+                // console.log(point.hour)
+                _.mapValues(point.markers, (mark) => {
+                    if (mark.lat && mark.lon) {
+                        var marker = {
+                                id: Date.now(),
+                                coords: {
+                                    latitude: mark.lat,
+                                    longitude: mark.lon
+                                },
+                                type: mark.type,
+                                options: {
+                                    icon: {
+                                        url: 'assets/images/' + mark.type + '.png',
+                                        anchor: new google.maps.Point(25, 50),
+                                        scaledSize: new google.maps.Size(40, 50)
+                                    }
+                                },
+                            }
+                            //console.log(marker)
+                        this.map.markers.push(marker)
+                    }
+                })
+            }
+
+        })
+
+    }
+
+    removeAllPoints() {
+        this.map.markers = []
     }
 
     toggleRoute() {
@@ -797,7 +840,5 @@ export class MainController {
         }
         return allPoints.points
     }
-
-
 
 }
