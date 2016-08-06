@@ -96,7 +96,7 @@ export class MainController {
             let initial = toSeconds(hour + ':00')
             let compare = toSeconds(point.hour + ':00')
             console.log( initial, compare)
-            if (compare == initial ) {
+            if (compare <= initial) {
                 // console.log(hour)
                 // console.log(point.hour)
                 _.mapValues(point.markers, (mark) => {

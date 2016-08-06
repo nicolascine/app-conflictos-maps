@@ -161,6 +161,8 @@
         }
         .li.complete .status h4 {
             color: #d7dad8;
+            outline: 0px;
+            cursor: pointer;
         }
         @media (min-device-width: 320px) and (max-device-width: 700px) {
             .timeline {
