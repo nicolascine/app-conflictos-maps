@@ -1,9 +1,65 @@
 <uib-accordion close-others="oneAtATime" class="footer-timeline">
     <div uib-accordion-group class="panel-default" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
         <div class="box-timeline">
-            <ul class="points">
-                <li ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">{{point.hour}}</li>
+            <ul class="timeline" id="timeline">
+               <!-- <li ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">{{point.hour}}</li>-->
+                <li class="li complete" ng-repeat="point in vm.points">
+                    <!--<div class="timestamp">
+                        <span class="date">{{point.hour}}<span>
+                  </div>-->
+                  <div class="status">
+                    <h4 ng-click="vm.itemClick(point.hour)"> {{point.hour}} </h4>
+                  </div>
+                </li>
             </ul>
+
+            <!-- <ul class="timeline" id="timeline">
+              <li class="li complete">
+                <div class="timestamp">
+                  <span class="author">Abhi Sharma</span>
+                        <span class="date">11/15/2014<span>
+                </div>
+                <div class="status">
+                  <h4> Shift Created </h4>
+                </div>
+              </li>
+              <li class="li complete">
+                <div class="timestamp">
+                  <span class="author">PAM Admin</span>
+                        <span class="date">11/15/2014<span>
+                </div>
+                <div class="status">
+                  <h4> Email Sent </h4>
+                </div>
+              </li>
+              <li class="li complete">
+                <div class="timestamp">
+                  <span class="author">Aaron Rodgers</span>
+                        <span class="date">11/15/2014<span>
+                </div>
+                <div class="status">
+                  <h4> SIC Approval </h4>
+                </div>
+              </li>
+              <li class="li">
+                <div class="timestamp">
+                  <span class="author">PAM Admin</span>
+                        <span class="date">TBD<span>
+                </div>
+                <div class="status">
+                  <h4> Shift Completed </h4>
+                </div>
+              </li>
+                  <li class="li">
+                <div class="timestamp">
+                  <span class="author">PAM Admin</span>
+                        <span class="date">TBD<span>
+                </div>
+                <div class="status">
+                  <h4> Shift Completed </h4>
+                </div>
+              </li>
+             </ul> -->
         </div>
     </div>
 </uib-accordion>

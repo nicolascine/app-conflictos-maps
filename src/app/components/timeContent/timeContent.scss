@@ -3,13 +3,13 @@
     padding: 50px 20px 0px 0px;
 }
 
-.timeline {
+.timeline-content {
     list-style: none;
     position: relative;
     padding: 20px 0 20px;
 }
 
-.timeline:before {
+.timeline-content:before {
     top: 0;
     bottom: 0;
     content: " ";
@@ -20,32 +20,32 @@
     background-color: #eeeeee;
 }
 
-.timeline > li {
+.timeline-content > li {
     margin-bottom: 20px;
     position: relative;
 }
 
-.timeline > li:before,
-.timeline > li:after {
+.timeline-content > li:before,
+.timeline-content > li:after {
     content: " ";
     display: table;
 }
 
-.timeline > li:after {
+.timeline-content > li:after {
     clear: both;
 }
 
-.timeline > li:before,
-.timeline > li:after {
+.timeline-content > li:before,
+.timeline-content > li:after {
     content: " ";
     display: table;
 }
 
-.timeline > li:after {
+.timeline-content > li:after {
     clear: both;
 }
 
-.timeline > li > .timeline-panel {
+.timeline-content > li > .timeline-panel {
     width: calc( 100% - 60px);
     float: right;
     border: 1px solid #d4d4d4;
@@ -56,7 +56,7 @@
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
 }
 
-.timeline > li > .timeline-panel:before {
+.timeline-content > li > .timeline-panel:before {
     position: absolute;
     top: 27px;
     left: -9px;
@@ -67,7 +67,7 @@
     content: " ";
 }
 
-.timeline > li > .timeline-panel:after {
+.timeline-content > li > .timeline-panel:after {
     // position: absolute;
     // top: 27px;
     // left: -14px;
@@ -79,7 +79,7 @@
     // content: " ";
 }
 
-.timeline > li > .timeline-badge {
+.timeline-content > li > .timeline-badge {
     color: #fff;
     width: 40px;
     height: 40px;
@@ -98,18 +98,18 @@
     border-bottom-left-radius: 50%;
 }
 
-.timeline > li.timeline-inverted > .timeline-panel {
+.timeline-content > li.timeline-inverted > .timeline-panel {
     float: right;
 }
 
-.timeline > li.timeline-inverted > .timeline-panel:before {
+.timeline-content > li.timeline-inverted > .timeline-panel:before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
 }
 
-.timeline > li.timeline-inverted > .timeline-panel:after {
+.timeline-content > li.timeline-inverted > .timeline-panel:after {
     border-left-width: 0;
     border-right-width: 14px;
     left: -14px;

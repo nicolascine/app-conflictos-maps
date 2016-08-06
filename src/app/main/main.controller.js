@@ -83,6 +83,10 @@ export class MainController {
         })
     }
 
+    setPointOnMap(hour){
+      console.log(hour)
+    }
+
     toggleRoute() {
         this.routeLineVisible = this.routeLineVisible ? false : true
     }
