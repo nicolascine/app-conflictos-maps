@@ -44,18 +44,18 @@ body {
 }
 
 #wrapper.toggled {
-    padding-left: 250px;
+    padding-left: 350px;
 }
 
 #sidebar-wrapper {
     z-index: 1000;
     position: fixed;
-    left: 250px;
+    left: 350px;
     width: 0;
     height: 100%;
-    margin-left: -250px;
+    margin-left: -350px;
     overflow-y: auto;
-    background: #000;
+    background: white;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -63,18 +63,18 @@ body {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 350px;
 }
 
 #page-content-wrapper {
     width: 100%;
     position: absolute;
-    padding: 15px;
+    padding: 0px;
 }
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -250px;
+    margin-right: -350px;
 }
 
 
@@ -83,7 +83,7 @@ body {
 .sidebar-nav {
     position: absolute;
     top: 0;
-    width: 250px;
+    width: 350px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -128,19 +128,19 @@ body {
 
 @media(min-width:768px) {
     #wrapper {
-        padding-left: 250px;
+        padding-left: 350px;
     }
     #wrapper.toggled {
         padding-left: 0;
     }
     #sidebar-wrapper {
-        width: 250px;
+        width: 350px;
     }
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
     #page-content-wrapper {
-        padding: 20px;
+        padding: 60px 0px 0px 0px;
         position: relative;
         height: 100%;
         width: 100%;
@@ -154,6 +154,16 @@ body {
 #menu-toggle {
     z-index: 100000;
     position: absolute;
+    height: 50px;
+    width: 25px;
+    border-radius: 0px;
+    background-color: white;
+    border: none;
+    padding: 0px;
+    font-size: 25px;
+    i {
+        padding: 12px 6px 0px 7px;
+    }
 }
 
 .angular-google-map-container {
@@ -165,74 +175,6 @@ body {
     z-index: 35;
 }
 
-// body {
-//     overflow: hidden;
-// }
-// .navbar-offset {
-//     margin-top: 50px;
-// }
-// #map {
-//     position: absolute;
-//     top: 50px;
-//     bottom: 0px;
-//     left: 0px;
-//     right: 0px;
-// }
-// #map .ol-zoom {
-//     font-size: 1.2em;
-// }
-// .zoom-top-opened-sidebar {
-//     margin-top: 5px;
-// }
-// .zoom-top-collapsed {
-//     margin-top: 45px;
-// }
-// .mini-submenu {
-//     display: none;
-//     background-color: transparent;
-//     border: 1px solid #a5a5a5;
-//     border-radius: 4px;
-//     padding: 9px;
-//     padding: 9px;
-//     /*position: relative;*/
-//     width: 42px;
-//     text-align: center;
-// }
-// .mini-submenu-left {
-//     position: absolute;
-//     top: 103px;
-//     left: 10px;
-//     z-index: 40;
-// }
-// .sidebar {
-//     overflow-y: scroll;
-//     height: 100vh;
-//     z-index: 45;
-//     background-color: rgba(255, 255, 255, 1);
-//     -webkit-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-//     -moz-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-//     -o-transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-//     transition: all 500ms cubic-bezier(0.470, 0.000, 0.745, 0.715);
-//     box-shadow: -4px 0px 9px 2px;
-// }
-// .main-row {
-//     position: relative;
-//     top: 0;
-// }
-// .mini-submenu:hover {
-//     cursor: pointer;
-// }
-// .collapsible-button {
-//     display: block;
-//     overflow: hidden;
-//     text-align: right;
-//     padding: 20px 0px;
-//     width: 100%;
-// }
-// .slide-submenu {
-//     background: white;
-//     display: inline-block;
-//     padding: 10px;
-//     border-radius: 4px;
-//     cursor: pointer;
-// }
+.gmnoprint {
+    margin-top: 50px;
+}

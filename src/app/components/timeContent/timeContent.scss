@@ -1,24 +1,23 @@
 .container-time-content {
-    height: 2500px;
-    display: block;
-    overflow: hidden;
+    //height: 2500px;
+    padding: 50px 20px 0px 0px;
 }
 
 .timeline {
     list-style: none;
-    padding: 20px 0 20px;
     position: relative;
+    padding: 20px 0 20px;
 }
 
 .timeline:before {
     top: 0;
     bottom: 0;
-    position: absolute;
     content: " ";
     width: 3px;
-    background-color: #eeeeee;
     left: 30px;
+    position: absolute;
     margin-left: -1.5px;
+    background-color: #eeeeee;
 }
 
 .timeline > li {

@@ -19,7 +19,7 @@ export class MainController {
             },
             zoom: 16,
             lineStyle: {
-                color: '#ffc107',
+                color: '#76b585',
                 weight: 15,
                 opacity: 0.7
             },
@@ -27,7 +27,12 @@ export class MainController {
         }
 
         this.mapOptions = {
-            styles: mapStyleArray
+            styles: mapStyleArray,
+            mapTypeControl: false,
+            streetViewControl: false,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_TOP
+            }
         }
 
         this.locations = [{
@@ -52,9 +57,8 @@ export class MainController {
 
     //out of constructor
     setMarkers() {
-
         _.mapValues(this.getHours, (point) => {
-            console.log(point.hour)
+            //console.log(point.hour)
             _.mapValues(point.markers, (mark) => {
                 if (mark.lat && mark.lon) {
                     var marker = {
@@ -62,8 +66,17 @@ export class MainController {
                         coords: {
                             latitude: mark.lat,
                             longitude: mark.lon
-                        }
+                        },
+                        type: mark.type,
+                        options: {
+                            icon: {
+                                url: 'assets/images/' + mark.type + '.png',
+                                anchor: new google.maps.Point(25, 50),
+                                scaledSize: new google.maps.Size(40, 50)
+                            }
+                        },
                     }
+                    //console.log(marker)
                     this.map.markers.push(marker)
                 }
             })
@@ -112,7 +125,7 @@ export class MainController {
                 {
                     "hour": "07:00",
                     "markers": [{
-                        "type": "Carabineros",
+                        "type": "carabineros",
                         "Descripcion": "Efectivos de Carabineros realiza inspección de seguridad en Dependencias del Congreso Nacional antes de la cuenta anual que realizará la presidenta Bachelet. Las puertas del Parlamento se abren a las 8:00 am.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -123,7 +136,7 @@ export class MainController {
                 }, {
                     "hour": "07:43",
                     "markers": [{
-                        "type": "Carabineros",
+                        "type": "carabineros",
                         "Descripcion": "Los preparativos de seguridad en las afueras del Congreso. Cerca de 1.700 efectivos de Carabineros se han desplegado en Valparaíso para la jornada.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -134,7 +147,7 @@ export class MainController {
                 }, {
                     "hour": "07:49",
                     "markers": [{
-                        "type": "Gobierno",
+                        "type": "gobierno",
                         "Descripcion": "Ministros comienzan a llegar a Cerro Castillo para la foto oficial.Cerca de las 8:15 será la fotografía oficial de la Presidenta Michelle Bachelet y su gabinete.",
                         "lat": -33.02003,
                         "lon": -71.564443,
@@ -145,7 +158,7 @@ export class MainController {
                 }, {
                     "hour": "07:52",
                     "markers": [{
-                        "type": "Cortes de tránsito",
+                        "type": "corte_transito",
                         "Descripcion": "Calles de Valparaíso ya están con cortes de tránsito",
                         "lat": null,
                         "lon": null,
@@ -153,7 +166,7 @@ export class MainController {
                         "media": "04-FOTO752.jpg",
                         "redes_sociales": ""
                     }, {
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": null,
                         "lon": null,
@@ -164,7 +177,7 @@ export class MainController {
                 }, {
                     "hour": "08:23",
                     "markers": [{
-                        "type": "Gobierno",
+                        "type": "gobierno",
                         "Descripcion": "Presidenta Michelle Bachelet se toma la foto oficial junto a su gabinete. La Presidenta mantiene prácticamente su mismo equipo salvo dos excepciones: el ex ministro de la Segpres, Jorge Insunza, quien salió del cargo el 7 de junio de 2015. En su reemplazo asumió Nicolás Eyzaguirre, quien dejó el ministerio de Educación, y Adriana Delpiano ingresó al gabinete.",
                         "lat": -33.02003,
                         "lon": -71.564443,
@@ -175,7 +188,7 @@ export class MainController {
                 }, {
                     "hour": "08:35",
                     "markers": [{
-                        "type": "Gobierno",
+                        "type": "gobierno",
                         "Descripcion": "Fuerzas Armadas y Carabineros desfilan fuera del Congreso Nacional a poco de que se inicie la cuenta anual de la Presidenta Bachelet.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -186,7 +199,7 @@ export class MainController {
                 }, {
                     "hour": "08:36",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -197,7 +210,7 @@ export class MainController {
                 }, {
                     "hour": "08:44",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": null,
                         "lon": null,
@@ -208,7 +221,7 @@ export class MainController {
                 }, {
                     "hour": "08:48",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": null,
                         "lon": null,
@@ -219,7 +232,7 @@ export class MainController {
                 }, {
                     "hour": "08:57",
                     "markers": [{
-                        "type": "Manifestantes",
+                        "type": "manifestantes",
                         "Descripcion": "Comienzan a reunirse manifestantes en Valparaíso. Estudiantes, pescadores y distintas organizaciones sociales convocaron a una marcha que comenzará a las 9:30 horas.",
                         "lat": -33.043839,
                         "lon": -71.623191,
@@ -227,7 +240,7 @@ export class MainController {
                         "media": "",
                         "redes_sociales": ""
                     }, {
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": null,
                         "lon": null,
@@ -238,7 +251,7 @@ export class MainController {
                 }, {
                     "hour": "09:05",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": null,
                         "lon": null,
@@ -249,7 +262,7 @@ export class MainController {
                 }, {
                     "hour": "09:08",
                     "markers": [{
-                        "type": "Manifestantes",
+                        "type": "manifestantes",
                         "Descripcion": "Comienzan a llegar hasta el frontis del Congreso Nacional manifestantes y partidarios de Michelle Bachelet.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -260,7 +273,7 @@ export class MainController {
                 }, {
                     "hour": "09:18",
                     "markers": [{
-                        "type": "Gobierno",
+                        "type": "gobierno",
                         "Descripcion": "Presidenta Michelle Bachelet llega al Congreso Nacional a bordo del tradicional Ford Galaxy descapotable.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -271,7 +284,7 @@ export class MainController {
                 }, {
                     "hour": "09:30",
                     "markers": [{
-                        "type": "Manifestantes",
+                        "type": "manifestantes",
                         "Descripcion": "Centenares de manifestantes comienzan una marcha pacífica hacia el Congreso Nacional. En la movilización participa la Confech, Anef, 'no al TPP Valparaíso', Valparaíso Ciudadano y Cut provincial.",
                         "lat": -33.043764,
                         "lon": -71.622899,
@@ -282,7 +295,7 @@ export class MainController {
                 }, {
                     "hour": "09:31",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.044007,
                         "lon": -71.62306,
@@ -293,7 +306,7 @@ export class MainController {
                 }, {
                     "hour": "09:35",
                     "markers": [{
-                        "type": "Gobierno",
+                        "type": "gobierno",
                         "Descripcion": "Comienza discurso de Presidenta Michelle Bachelet: Presidenta dirige su discurso a los 'ciudadanos y ciudadanas de la patria, a las familias, a los líderes sociales, a los trabajadores, a los empresarios, a los pueblos indígenas'.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -301,7 +314,7 @@ export class MainController {
                         "media": "10-FOTO935.jpg",
                         "redes_sociales": ""
                     }, {
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.044137,
                         "lon": -71.623157,
@@ -312,7 +325,7 @@ export class MainController {
                 }, {
                     "hour": "10:21",
                     "markers": [{
-                        "type": "Manifestantes",
+                        "type": "manifestantes",
                         "Descripcion": "Así transcurre la marcha convocada por distintos sectores sociales para manifestarse contra la autoridad y demandar mejores condiciones.",
                         "lat": -33.046615,
                         "lon": -71.619096,
@@ -323,7 +336,7 @@ export class MainController {
                 }, {
                     "hour": "10:33",
                     "markers": [{
-                        "type": "Carabineros",
+                        "type": "carabineros",
                         "Descripcion": "Efectivos de Carabineros comienza a retirar a manifestantes que se encuentran frente al Congreso Nacional.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -331,7 +344,7 @@ export class MainController {
                         "media": "12-FOTO1033.jpg",
                         "redes_sociales": ""
                     }, {
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -342,7 +355,7 @@ export class MainController {
                 }, {
                     "hour": "10:34",
                     "markers": [{
-                        "type": "Incidentes",
+                        "type": "incidentes",
                         "Descripcion": "Se registran los primeros incidentes entre manifestantes que intentan llegar al Congreso Nacional y las fuerzas policiales a cargo de mantener el orden en la ciudad puerto.",
                         "lat": -33.047123,
                         "lon": -71.614307,
@@ -353,7 +366,7 @@ export class MainController {
                 }, {
                     "hour": "10:39",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.047213,
                         "lon": -71.613395,
@@ -364,7 +377,7 @@ export class MainController {
                 }, {
                     "hour": "10:53",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.046879,
                         "lon": -33.046879,
@@ -375,7 +388,7 @@ export class MainController {
                 }, {
                     "hour": "10:55",
                     "markers": [{
-                        "type": "Incidentes",
+                        "type": "incidentes",
                         "Descripcion": "Manifestantes encienden barricadas y comienzan actos de violencia y destrucción de la propiedad pública y privada.",
                         "lat": -33.046857,
                         "lon": -71.617044,
@@ -386,7 +399,7 @@ export class MainController {
                 }, {
                     "hour": "10:57",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.043805,
                         "lon": -71.605975,
@@ -397,7 +410,7 @@ export class MainController {
                 }, {
                     "hour": "11:00",
                     "markers": [{
-                        "type": "Incendio",
+                        "type": "incendio",
                         "Descripcion": "Manifestantes preden fuego a una farmacia tras marcha del 21 de mayo.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -405,7 +418,7 @@ export class MainController {
                         "media": "15-FOTO1100.jpg",
                         "redes_sociales": ""
                     }, {
-                        "type": "Incidentes",
+                        "type": "incidentes",
                         "Descripcion": "Comienzan a Lanzar gases lacrimógenes en Chacabuco con Las Heras.",
                         "lat": -33.046025,
                         "lon": -71.616969,
@@ -413,7 +426,7 @@ export class MainController {
                         "media": "18_FOTO1100.jpg",
                         "redes_sociales": ""
                     }, {
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.046007,
                         "lon": -71.616899,
@@ -424,7 +437,7 @@ export class MainController {
                 }, {
                     "hour": "11:01",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.046839,
                         "lon": -71.617071,
@@ -435,7 +448,7 @@ export class MainController {
                 }, {
                     "hour": "11:02",
                     "markers": [{
-                        "type": "Gobierno",
+                        "type": "gobierno",
                         "Descripcion": "Finaliza discurso de la Presidenta Bachelet ante el Congreso Pleno.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -446,7 +459,7 @@ export class MainController {
                 }, {
                     "hour": "11:04",
                     "markers": [{
-                        "type": "Bomberos",
+                        "type": "bomberos",
                         "Descripcion": "Bomberos y carros lanza aguas de Carabineros combaten incendio en farmacia saqueada.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -457,7 +470,7 @@ export class MainController {
                 }, {
                     "hour": "11:14",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Incendio en edificio patrimonial: Primeros antecedentes indican que el lugar no estaba habitado. Concejo Municipal y oficinas del municipio de Valparaíso funcionaban en el edificio.",
                         "lat": -33.04701,
                         "lon": -71.617044,
@@ -468,7 +481,7 @@ export class MainController {
                 }, {
                     "hour": "11:20",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.047,
                         "lon": -71.617133,
@@ -479,7 +492,7 @@ export class MainController {
                 }, {
                     "hour": "11:26",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "El Alcalde de Valparaíso, Jorge Castro, aseguró que 'las pérdidas son millonarias' tras incendio en edificio municipal. 'Hay tres locales comerciales quemados. Estamos cometiendo un grueso error sobre seguir estas prácticas en Valparaíso', afirmó, reiterando sus críticas a que la cuenta pública se realice en la ciudad",
                         "lat": -33.052548,
                         "lon": -71.602669,
@@ -490,7 +503,7 @@ export class MainController {
                 }, {
                     "hour": "11:32",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Personal de emergencia trabaja en reanimación de hombre afectado tras incidentes",
                         "lat": -33.046766,
                         "lon": -71.617047,
@@ -501,7 +514,7 @@ export class MainController {
                 }, {
                     "hour": "11:44",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -512,7 +525,7 @@ export class MainController {
                 }, {
                     "hour": "11:47",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.045498,
                         "lon": -71.606007,
@@ -523,7 +536,7 @@ export class MainController {
                 }, {
                     "hour": "11:54",
                     "markers": [{
-                        "type": "Incendio",
+                        "type": "incendio",
                         "Descripcion": "Edificio en calle Carrera con Pedro Montt también se incendia y encapuchados no permiten ingreso de personal de emergencia",
                         "lat": -33.046743,
                         "lon": -71.618457,
@@ -534,7 +547,7 @@ export class MainController {
                 }, {
                     "hour": "11:58",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Comandante de Bomberos descarta presencia de nuevos trabajadores en incendios.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -545,7 +558,7 @@ export class MainController {
                 }, {
                     "hour": "11:59",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.046304,
                         "lon": -71.619907,
@@ -556,7 +569,7 @@ export class MainController {
                 }, {
                     "hour": "12:00",
                     "markers": [{
-                        "type": "Carabineros",
+                        "type": "carabineros",
                         "Descripcion": "Continúan los operativos de Carabineros. En plaza Victoria se registraron detenidos.",
                         "lat": -33.046304,
                         "lon": -71.619907,
@@ -567,7 +580,7 @@ export class MainController {
                 }, {
                     "hour": "12:11",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "En la Gobernación de Valparaíso, el Ministerio del Interior confirma muerte de ​Eduardo Lara, trabajador asfixiado en incendio.",
                         "lat": -33.043284,
                         "lon": -71.623729,
@@ -578,7 +591,7 @@ export class MainController {
                 }, {
                     "hour": "12:21",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Fiscal jefe de Valparaíso confirma muerte de trabajador: 'Estamos en la presencia de un incendio intencional. A raíz del mismo habría provocado la muerte de esta persona'.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -589,7 +602,7 @@ export class MainController {
                 }, {
                     "hour": "12:26",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.038681,
                         "lon": -71.629079,
@@ -600,7 +613,7 @@ export class MainController {
                 }, {
                     "hour": "12:31",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Gobierno anuncia acciones legales 'para perseguir la responsabilidad de quienes provocaron estos hechos'.",
                         "lat": -33.038681,
                         "lon": -71.629079,
@@ -611,7 +624,7 @@ export class MainController {
                 }, {
                     "hour": "12:38",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Autoridades confirman detenidos por incendio que terminó con muerte de Eduardo Lara.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -622,7 +635,7 @@ export class MainController {
                 }, {
                     "hour": "12:41",
                     "markers": [{
-                        "type": "Incendio",
+                        "type": "incendio",
                         "Descripcion": "Encapuchados atacan comercio en calle Independencia y se inicia incendio en tienda Ripley.",
                         "lat": -33.046816,
                         "lon": -71.619973,
@@ -633,7 +646,7 @@ export class MainController {
                 }, {
                     "hour": "12:42",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.046304,
                         "lon": -71.619907,
@@ -644,7 +657,7 @@ export class MainController {
                 }, {
                     "hour": "12:56",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.046743,
                         "lon": -71.618457,
@@ -655,7 +668,7 @@ export class MainController {
                 }, {
                     "hour": "13:07",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Bomberos controla primer foco de incendio en Calle Carrera con Pedro Montt.",
                         "lat": -33.046743,
                         "lon": -71.618457,
@@ -666,7 +679,7 @@ export class MainController {
                 }, {
                     "hour": "13:20",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Bomberos se enfrentan a encapuchados mientras intentan sofocar incendio que destruye edificio patrimonial.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -677,7 +690,7 @@ export class MainController {
                 }, {
                     "hour": "13:38",
                     "markers": [{
-                        "type": "Incendio",
+                        "type": "incendio",
                         "Descripcion": "Se reactiva incendio en edificio patrimonial de Valparaíso.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -688,7 +701,7 @@ export class MainController {
                 }, {
                     "hour": "13:41",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Alcalde de Valparaíso por muerte de guardia: 'Hay responsabilidades políticas",
                         "lat": -33.052521,
                         "lon": -71.602691,
@@ -699,7 +712,7 @@ export class MainController {
                 }, {
                     "hour": "13:45",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -710,7 +723,7 @@ export class MainController {
                 }, {
                     "hour": "13:53",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Intendente de Valparaíso confirma que hay 19 detenidos y se espera que entre ellos se pueda identificar a culpables de iniciar incendio",
                         "lat": -33.042935,
                         "lon": -71.623585,
@@ -721,7 +734,7 @@ export class MainController {
                 }, {
                     "hour": "14:13",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Carabineros entrega cuenta preliminar sobre incidentes en Valparaíso: 26 hombres adultos, 7 mujeres, 4 menores: Total  37",
                         "lat": -33.04686,
                         "lon": -71.619401,
@@ -732,7 +745,7 @@ export class MainController {
                 }, {
                     "hour": "14:16",
                     "markers": [{
-                        "type": "Incendio",
+                        "type": "incendio",
                         "Descripcion": "Sigue el trabajo de Bomberos para controlar el incendio de Montt con Las Heras.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -743,7 +756,7 @@ export class MainController {
                 }, {
                     "hour": "15:00",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Carabineros controla los incidentes en el casco antiguo de Valparaíso y paulatinamente retorna el orden.",
                         "lat": -33.047373,
                         "lon": -71.608801,
@@ -754,7 +767,7 @@ export class MainController {
                 }, {
                     "hour": "15:30",
                     "markers": [{
-                        "type": "Informacion",
+                        "type": "informacion",
                         "Descripcion": "Bomberos controla incendio y comienza con trabajo de remoción de escombros.",
                         "lat": null,
                         "lon": null,
@@ -765,7 +778,7 @@ export class MainController {
                 }, {
                     "hour": "13:15",
                     "markers": [{
-                        "type": "Redes Sociales",
+                        "type": "redes_sociales",
                         "Descripcion": "",
                         "lat": -33.038681,
                         "lon": -71.629079,

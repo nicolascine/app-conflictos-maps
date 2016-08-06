@@ -21,49 +21,7 @@
 -->
 <!-- xxx
  <div class="container">
-     <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
-         <div class="container-fluid">
-             <div class="navbar-header">
-                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                     <span class="sr-only">Toggle navigation</span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                     <span class="icon-bar"></span>
-                 </button>
-                 <a class="navbar-brand" href="#">Logo aplicación</a>
-             </div>
-             <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
-                 <ul class="nav navbar-nav">
-                     <li><a ng-click="main.toggleRoute()">toggle Route</a></li>
-                     <li class="dropdown" uib-dropdown dropdown-append-to-body>
-                         <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                         <ul class="dropdown-menu" uib-dropdown-menu>
-                             <li><a href="#">Action</a></li>
-                             <li><a href="#">Another action</a></li>
-                             <li><a href="#">Something else here</a></li>
-                             <li class="divider"></li>
-                             <li><a href="#">Separated link</a></li>
-                             <li class="divider"></li>
-                             <li><a href="#">One more separated link</a></li>
-                         </ul>
-                     </li>
-                 </ul>
-                 <ul class="nav navbar-nav navbar-right">
-                     <li><a href="#">Link</a></li>
-                     <li class="dropdown" uib-dropdown dropdown-append-to-body>
-                         <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                         <ul class="dropdown-menu pull-right">
-                             <li><a href="#">Action</a></li>
-                             <li><a href="#">Another action</a></li>
-                             <li><a href="#">Something else here</a></li>
-                             <li class="divider"></li>
-                             <li><a href="#">Separated link</a></li>
-                         </ul>
-                     </li>
-                 </ul>
-             </div>
-         </div>
-     </nav>
+
  </div>
 
  <div class="navbar-offset"></div>
@@ -85,49 +43,66 @@
    </div>
 
  -->
+ <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+     <div class="container-fluid">
+         <div class="navbar-header">
+             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+             </button>
+             <a class="navbar-brand" href="#">Logo aplicación</a>
+         </div>
+         <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
+             <ul class="nav navbar-nav">
+                 <li class="dropdown" uib-dropdown dropdown-append-to-body>
+                     <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                     <ul class="dropdown-menu" uib-dropdown-menu>
+                         <li><a ng-click="main.toggleRoute()">Ruta</a></li>
+                         <li><a href="#">Another action</a></li>
+                         <li><a href="#">Something else here</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#">Separated link</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#">One more separated link</a></li>
+                     </ul>
+                 </li>
+             </ul>
+             <ul class="nav navbar-nav navbar-right">
+                 <li class="dropdown" uib-dropdown dropdown-append-to-body>
+                     <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                     <ul class="dropdown-menu pull-right">
+                         <li><a href="#">Action</a></li>
+                         <li><a href="#">Another action</a></li>
+                         <li><a href="#">Something else here</a></li>
+                         <li class="divider"></li>
+                         <li><a href="#">Separated link</a></li>
+                     </ul>
+                 </li>
+             </ul>
+         </div>
+     </div>
+ </nav>
 <div id="wrapper">
+
+
+
 <ui-gmap-google-map center='main.map.center' zoom='main.map.zoom' options='main.mapOptions' id="map">
     <ui-gmap-polyline visible="main.routeLineVisible" path="main.locations" draggable="false" geodesic="true" stroke="main.map.lineStyle" fit="true">
-      <ui-gmap-marker ng-repeat="m in main.map.markers" coords="m.coords" icon="m.icon" idkey="m.id"></ui-gmap-marker>
+      <ui-gmap-marker ng-repeat="m in main.map.markers" coords="m.coords" options="m.options" idkey="m.id"></ui-gmap-marker>
     </ui-gmap-polyline>
 </ui-gmap-google-map>
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">
-                      Start Bootstrap
-                  </a>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li>
-                <a href="#">Shortcuts</a>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
+        <acme-timecontent creation-date="main.creationDate"></acme-timecontent>
     </div>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+        <a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><i class="fa fa-angle-right"></i></a>
     </div>
     <!-- /#page-content-wrapper -->
 
