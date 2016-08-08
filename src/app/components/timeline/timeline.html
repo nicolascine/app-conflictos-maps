@@ -10,12 +10,12 @@
         <div class="box-timeline">
             <ul class="timeline" id="timeline">
                <!-- <li ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">{{point.hour}}</li>-->
-                <li class="li complete" ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">
+                <li class="li complete" ng-repeat="point in vm.points" ng-class="vm.getClassName(point.Hora_ini)">
                     <!--<div class="timestamp">
                         <span class="date">{{point.hour}}<span>
                   </div>-->
                   <div class="status">
-                    <h4 ng-click="vm.itemClick(point.hour)"> {{point.hour}} </h4>
+                    <h4 ng-click="vm.itemClick(point.Hora_ini)"> {{point.Hora_ini}} </h4>
                   </div>
                 </li>
             </ul>
