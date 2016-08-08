@@ -80,7 +80,7 @@
             padding: 0px 7px 0px 3px;
             border-top: 2px solid #D6DCE0;
             transition: all 200ms ease-in;
-            margin-bottom: 39px;
+            margin-bottom: 0px;
         }
         .status h4 {
             font-weight: 600;
@@ -88,10 +88,9 @@
         }
         .status:before {
             content: "";
-            width: 6px;
-            height: 6px;
-            background-color: white;
-            border-radius: 6px;
+            width: 2px;
+            height: 28px;
+            background-color: #fff;
             border: 1px solid #ddd;
             position: absolute;
             top: -15px;

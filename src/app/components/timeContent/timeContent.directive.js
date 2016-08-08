@@ -1,25 +1,26 @@
 export function TimeContentDirective() {
-  'ngInject';
+    'ngInject';
 
-  let directive = {
-    restrict: 'E',
-    templateUrl: 'app/components/timeContent/timeContent.html',
-    scope: {
-        creationDate: '='
-    },
-    controller: timeContentController,
-    controllerAs: 'vm',
-    bindToController: true
-  };
+    let directive = {
+        restrict: 'E',
+        templateUrl: 'app/components/timeContent/timeContent.html',
+        scope: {
+            arrayData: '=',
+            creationDate: '='
+        },
+        controller: timeContentController,
+        controllerAs: 'vm',
+        bindToController: true
+    };
 
-  return directive;
+    return directive;
 }
 
 class timeContentController {
-  constructor (moment) {
-    'ngInject';
+    constructor(moment) {
+        'ngInject';
 
-    // "this.creationDate" is available by directive option "bindToController: true"
-    this.relativeDate = moment(this.creationDate).fromNow();
-  }
+        // "this.creationDate" is available by directive option "bindToController: true"
+        this.relativeDate = moment(this.creationDate).fromNow();
+    }
 }

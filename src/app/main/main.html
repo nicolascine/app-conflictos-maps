@@ -103,14 +103,22 @@
 
 </header>
 <div id="wrapper" class="toggled">
+
     <ui-gmap-google-map center='main.map.center' zoom='main.map.zoom' options='main.mapOptions' id="map">
-        <ui-gmap-polyline visible="main.routeLineVisible" path="main.locations" draggable="false" geodesic="true" stroke="main.map.lineStyle" fit="true">
-            <ui-gmap-marker ng-repeat="m in main.map.markers" coords="m.coords" options="m.options" idkey="m.id"></ui-gmap-marker>
+        <!-- recorrido -->
+        <ui-gmap-polyline visible="main.routeLineVisible" path="main.recorridoMarcha" draggable="false" geodesic="true" stroke="main.map.lineaRecorrido" fit="true">
         </ui-gmap-polyline>
+
+        <!-- cierre perimetral -->
+        <ui-gmap-polyline visible="main.routeCorteVisible" path="main.corteCalles" draggable="false" geodesic="true" stroke="main.map.lineaCorteCalles" fit="true">
+        </ui-gmap-polyline>
+
+        <ui-gmap-marker ng-repeat="m in main.map.markers" events="m.events" title="m.title" typeName="m.typeName" subTypeName="m.subTypeName" coords="m.coords" options="m.options" idkey="m.id"></ui-gmap-marker>
     </ui-gmap-google-map>
+
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
-        <acme-timecontent creation-date="main.creationDate"></acme-timecontent>
+        <acme-timecontent array-data="main.timelineContentData" creation-date="main.creationDate"></acme-timecontent>
     </div>
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
