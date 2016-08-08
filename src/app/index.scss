@@ -29,7 +29,8 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
 // injector
 // endinjector
 body {
-    overflow-x: hidden;
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow: hidden;
 }
 
 
@@ -135,12 +136,13 @@ body {
     }
     #sidebar-wrapper {
         width: 350px;
+        margin-top:45px;
     }
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
     #page-content-wrapper {
-        padding: 60px 0px 0px 0px;
+        padding: 45px 0px 0px 0px;
         position: relative;
         height: 100%;
         width: 100%;
@@ -177,4 +179,43 @@ body {
 
 .gmnoprint {
     margin-top: 50px;
+}
+
+header {
+    background-color: #3F3D48;
+    opacity: 0.9;
+    color: #FFF;
+    padding: 5px 15px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+}
+
+header div {
+    display: inline-block;
+    margin-right: -4px;
+    width: 50%;
+}
+
+header a {
+    color:#FFF;
+    padding:0 15px;
+    vertical-align:middle;
+}
+
+.cont-layers {
+    background-color: #3F3D48;
+    border-radius: 0 0 0 4px;
+    color:#FFF;
+    display:none;
+    position:absolute;
+    top:45px;
+    right:0;
+    width:115px;
+}
+
+.cont-layers ul {
+    list-style:none;
+    margin:0 0 7px 15px;
+    padding:0;
 }

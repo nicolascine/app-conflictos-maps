@@ -43,7 +43,7 @@
    </div>
 
  -->
-<nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+<!-- <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -57,8 +57,8 @@
         <div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="dropdown" uib-dropdown dropdown-append-to-body>
-                    <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                    <ul class="dropdown-menu" uib-dropdown-menu>
+                    <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons">layers</i></a>
+                    <ul class="dropdown-menu pull-right" uib-dropdown-menu>
                         <li><a ng-click="main.toggleRoute()">Ruta</a></li>
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
@@ -71,19 +71,37 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown" uib-dropdown dropdown-append-to-body>
-                    <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <a href="#" uib-dropdown-toggle class="dropdown-toggle" data-toggle="dropdown"><i class="material-icons">layers</i></a>
                     <ul class="dropdown-menu pull-right">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><label><input type="checkbox"> Oficial</label></li>
+                        <li><label><input type="checkbox"> Incidentes</label></li>
+                        <li><label><input type="checkbox"> Informacion</label></li>
                     </ul>
                 </li>
             </ul>
         </div>
     </div>
-</nav>
+</nav> -->
+<header>
+    <div><h1>Manifestaciones 21 de mayo del 2016</h1></div>
+    <div style="text-align: right;">
+        <a id="layers" href=""><i class="material-icons">layers</i></a>
+    </div>
+    <div id="cont-layers" class="cont-layers">
+        <ul>
+            <li><label><input type="checkbox" checked> Oficial</label></li>
+            <li><label><input type="checkbox" checked> Incidentes</label></li>
+            <li><label><input type="checkbox" checked> Informacion</label></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        $('#layers').click(function() {
+            $('#cont-layers').slideToggle();
+        });
+    </script>
+
+</header>
 <div id="wrapper" class="toggled">
     <ui-gmap-google-map center='main.map.center' zoom='main.map.zoom' options='main.mapOptions' id="map">
         <ui-gmap-polyline visible="main.routeLineVisible" path="main.locations" draggable="false" geodesic="true" stroke="main.map.lineStyle" fit="true">
@@ -103,3 +121,6 @@
     <acme-timeline all-points="main.getHours" item-click="main.setPointOnMap" map="main.map"></acme-timeline>
 </div>
 <!-- /#wrapper -->
+
+
+

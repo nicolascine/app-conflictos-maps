@@ -74,7 +74,7 @@ export class MainController {
                                 icon: {
                                     url: 'assets/images/' + mark.type + '.png',
                                     anchor: new google.maps.Point(25, 50),
-                                    scaledSize: new google.maps.Size(40, 50)
+                                    scaledSize: new google.maps.Size(40, 40)
                                 }
                             },
                         }

@@ -185,3 +185,23 @@
         }
     }
 }
+.categorias {
+    margin-left: 15px;
+    padding: 3px 10px 10px 10px;
+    width: 135px;
+}
+
+.categorias ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.categorias ul li {
+    margin-bottom:-10px;
+}
+
+.categorias img {
+    height: 30px;
+    margin-bottom: 3px;
+}
