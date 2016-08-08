@@ -97,15 +97,18 @@ export class MainController {
 
     //out of constructor
     setDataInfo(info) {
-        console.log(info)
-
+        _.mapValues(info, (item) => {
+            console.log(item.id)
+            angular.element("#" + item.id).addClass("active")
+        })
     }
+
     setMarkers() {
         _.mapValues(this.getHours, (point) => {
             _.mapValues(point.markers, (mark) => {
                 if (mark.lat && mark.lon) {
                     var marker = {
-                            id: mark.type + '_' + new Date().valueOf(),
+                            id: mark.type + '_' + this.guid(),
                             coords: {
                                 latitude: mark.lat,
                                 longitude: mark.lon
@@ -126,8 +129,9 @@ export class MainController {
                                 click: (marker, eventName, model) => {
                                     // console.log(model.$parent.$parent.$parent.$parent.main.timelineContentData)
                                     // model.$parent.$parent.$parent.$parent.main.timelineContentData = []
+
                                     let info = [{
-                                        'id': model.id,
+                                        'id': model.idKey,
                                         'type': model.options.typeName,
                                         'subType': model.options.subTypeName,
                                         'hour': model.options.hour,
@@ -139,7 +143,7 @@ export class MainController {
                                 }
                             }
                         }
-                    //set Markers on Map
+                        //set Markers on Map
                     this.map.markers.push(marker)
                 }
             })
@@ -153,7 +157,7 @@ export class MainController {
     */
     scrollTo(container, anchor) {
         var element = angular.element(anchor);
-        angular.element(container).animate({scrollTop: element.offset().top}, "slow");
+        angular.element(container).animate({ scrollTop: element.offset().top }, "slow");
     }
 
     setPointOnMap(hour) {
@@ -172,7 +176,7 @@ export class MainController {
                     let horaFinal = toSeconds(mark.Hora_fin + ':00')
                     if (horaClick == horaInicial || (horaInicial <= horaClick && horaClick <= horaFinal)) {
                         var marker = {
-                            id: mark.type + '_' + new Date().valueOf(),
+                            id: mark.type + '_' + this.guid(),
                             coords: {
                                 latitude: mark.lat,
                                 longitude: mark.lon
@@ -194,7 +198,7 @@ export class MainController {
                                     // console.log(model.$parent.$parent.$parent.$parent.main.timelineContentData)
                                     // model.$parent.$parent.$parent.$parent.main.timelineContentData = []
                                     let info = [{
-                                        'id': model.id,
+                                        'id': model.idKey,
                                         'type': model.options.typeName,
                                         'subType': model.options.subTypeName,
                                         'hour': model.options.hour,
@@ -202,7 +206,7 @@ export class MainController {
                                         'link': 'http://google.com',
                                         'text': model.options.title
                                     }]
-                                    console.log(model.options.image)
+
                                     this.setDataInfo(info)
                                 }
                             }
@@ -217,17 +221,17 @@ export class MainController {
 
         //set Panel info
         _.mapValues(this.map.markers, (point) => {
-          let panel = {
-              'id': point.id,
-              'type': point.options.typeName,
-              'subType': point.options.subTypeName,
-              'hour': point.options.hour,
-              'image': point.options.image,
-              'link': 'http://google.com',
-              'text': point.options.title
-          }
-          console.log(panel)
-          this.timelineContentData.push(panel)
+            let panel = {
+                'id': point.id,
+                'type': point.options.typeName,
+                'subType': point.options.subTypeName,
+                'hour': point.options.hour,
+                'image': point.options.image,
+                'link': 'http://google.com',
+                'text': point.options.title
+            }
+            console.log(panel)
+            this.timelineContentData.push(panel)
         })
 
     }
@@ -250,6 +254,15 @@ export class MainController {
                 })
             })
         }, 100)
+    }
+
+    guid() {
+        function s4() {
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1)
+        }
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4()
     }
 
     activate($timeout, webDevTec) {
@@ -1521,7 +1534,7 @@ export class MainController {
                         "intensidad": null
                     }]
                 }
-            ] >>> >>> > feat(): udpate map
+            ]
         }
 
 

@@ -9,7 +9,8 @@ export function TimelineDirective() {
             itemClick: '=',
             map: '=',
             setDataInfo: '=',
-            timelineContentData: '='
+            timelineContentData: '=',
+            guid: '='
         },
         controller: timelineController,
         controllerAs: 'vm',
