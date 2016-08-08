@@ -83,12 +83,12 @@ export class MainController {
     //out of constructor
     setDataInfo(info) {
         _.mapValues(info, (item) => {
-            console.log(item.id)
-            angular.element("#" + item.id).addClass("active")
-            console.log( $('.timeline-content #' + item.id) )
-            $('.timeline-content').animate({
-                 scrollTop: $('.timeline-content #' + item.id).position().top
-            }, 'slow');
+            angular.element('.timeline-content').find('li#'+item.id).removeClass('non-active').addClass('active')
+            angular.element('.timeline-content').find('li').not('#' + item.id).addClass('non-active')
+            // console.log( $('.timeline-content #' + item.id) )
+            // $('.timeline-content').animate({
+            //      scrollTop: $('.timeline-content #' + item.id).position().top
+            // }, 'slow')
         })
     }
 
