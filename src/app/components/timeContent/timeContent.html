@@ -1,14 +1,17 @@
 <div class="container-time-content">
-    <ul class="timeline-content">
+    <ul class="timeline-content" ng-if='vm.arrayData'>
         <li ng-repeat="info in vm.arrayData">
             <div class="timeline-badge info"><i class="fa fa-comment" aria-hidden="true"></i></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
                     <h4 class="timeline-title">{{info.type}}</h4>
                 </div>
+                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{info.hour}} - {{info.subType}}</small></p>
                 <div class="timeline-body">
-                    <img src="assets/images/news/{{info.image}}" class="img-responsive" alt="">
-                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{info.hour}} - {{info.subType}}</small></p>
+                    <div ng-if="info.image != ''">
+                        <img src="assets/images/news/{{info.image}}" class="img-responsive" alt="">
+                    </div>
+                    <p>{{info.text}}</p>
                     <small>{{info.link}}</small>
                 </div>
             </div>

@@ -88,28 +88,7 @@ export class MainController {
         this.routeCorteVisible = true
 
         this.setMarkers()
-        this.timelineContentData = [{
-            'type': 'Incidente',
-            'subType': 'Bombero',
-            'hour': '13:45',
-            'image': 'hola.png',
-            'link': 'http://google.com',
-            'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita molestias autem repudiandae delectus, dicta minima aliquam eligendi cum laboriosam temporibus iure commodi non ipsa quisquam porro quo minus, repellat. Nisi.'
-        }, {
-            'type': 'Incidente',
-            'subType': 'Bombero',
-            'hour': '13:45',
-            'image': 'hola.png',
-            'link': 'http://google.com',
-            'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita molestias autem repudiandae delectus, dicta minima aliquam eligendi cum laboriosam temporibus iure commodi non ipsa quisquam porro quo minus, repellat. Nisi.'
-        }, {
-            'type': 'Incidente',
-            'subType': 'Bombero',
-            'hour': '13:45',
-            'image': 'hola.png',
-            'link': 'http://google.com',
-            'text': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita molestias autem repudiandae delectus, dicta minima aliquam eligendi cum laboriosam temporibus iure commodi non ipsa quisquam porro quo minus, repellat. Nisi.'
-        }]
+        this.timelineContentData = []
 
     }
 
@@ -135,7 +114,7 @@ export class MainController {
                                 icon: {
                                     url: 'assets/images/' + mark.type + '.png',
                                     anchor: new google.maps.Point(25, 50),
-                                    scaledSize: new google.maps.Size(40, 50)
+                                    scaledSize: new google.maps.Size(50, 50)
                                 },
                                 typeName: mark.type,
                                 subTypeName: mark.subtype,
@@ -157,17 +136,6 @@ export class MainController {
                                     }]
                                     console.log(model.options.image)
                                     this.setDataInfo(info)
-
-                                    // let text = 123
-                                    // this.setDataInfo(text)
-                                    // console.log(marker)
-                                    // console.log(eventName)
-                                    // console.log(model.options)
-                                    // console.log("<------------------------")
-                                    // $scope.map.window.model = model;
-                                    // $scope.map.window.model = model;
-                                    // $scope.map.window.title = model.title;
-                                    // $scope.map.window.show = true;
                                 }
                             }
                         }
@@ -197,29 +165,42 @@ export class MainController {
                     let horaFinal = toSeconds(mark.Hora_fin + ':00')
                     if (horaClick == horaInicial || (horaInicial <= horaClick && horaClick <= horaFinal)) {
                         var marker = {
-                                id: Date.now(),
-                                coords: {
-                                    latitude: mark.lat,
-                                    longitude: mark.lon
+                            id: Date.now(),
+                            coords: {
+                                latitude: mark.lat,
+                                longitude: mark.lon
+                            },
+                            options: {
+                                icon: {
+                                    url: 'assets/images/' + mark.type + '.png',
+                                    anchor: new google.maps.Point(25, 50),
+                                    scaledSize: new google.maps.Size(50, 50)
                                 },
-                                type: mark.type,
-                                options: {
-                                    icon: {
-                                        url: 'assets/images/' + mark.type + '.png',
-                                        anchor: new google.maps.Point(25, 50),
-                                        scaledSize: new google.maps.Size(40, 50)
-                                    }
-                                },
+                                typeName: mark.type,
+                                subTypeName: mark.subtype,
+                                title: mark.desc,
+                                hour: point.Hora_ini,
+                                image: mark.media
+                            },
+                            events: {
+                                click: (marker, eventName, model) => {
+                                    // console.log(model.$parent.$parent.$parent.$parent.main.timelineContentData)
+                                    // model.$parent.$parent.$parent.$parent.main.timelineContentData = []
+                                    let info = [{
+                                        'type': model.options.typeName,
+                                        'subType': model.options.subTypeName,
+                                        'hour': model.options.hour,
+                                        'image': model.options.image,
+                                        'link': 'http://google.com',
+                                        'text': model.options.title
+                                    }]
+                                    console.log(model.options.image)
+                                    this.setDataInfo(info)
+                                }
                             }
-                            //console.log(marker)
+                        }
                         this.map.markers.push(marker)
-
-
-
                     }
-
-
-
                     //-------->
                 }
             })
