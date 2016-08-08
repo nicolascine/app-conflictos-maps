@@ -12,7 +12,7 @@
 <!-- Listado hitos -->
 <div class="container-time-content" ng-show='!!vm.arrayData.length'>
     <ul class="timeline-content">
-        <li ng-repeat="info in vm.arrayData">
+        <li ng-repeat="info in vm.arrayData" id="{{info.id}}">
             <div class="timeline-badge info"><span class="informacion"></span></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">

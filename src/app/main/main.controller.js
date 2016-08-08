@@ -52,6 +52,7 @@ export class MainController {
             styles: mapStyleArray,
             mapTypeControl: false,
             streetViewControl: false,
+            scrollwheel: false,
             zoomControlOptions: {
                 position: google.maps.ControlPosition.RIGHT_TOP
             }
@@ -97,14 +98,14 @@ export class MainController {
     //out of constructor
     setDataInfo(info) {
         console.log(info)
-        this.timelineContentData = info
+
     }
     setMarkers() {
         _.mapValues(this.getHours, (point) => {
             _.mapValues(point.markers, (mark) => {
                 if (mark.lat && mark.lon) {
                     var marker = {
-                            id: Date.now(),
+                            id: mark.type + '_' + new Date().valueOf(),
                             coords: {
                                 latitude: mark.lat,
                                 longitude: mark.lon
@@ -126,6 +127,7 @@ export class MainController {
                                     // console.log(model.$parent.$parent.$parent.$parent.main.timelineContentData)
                                     // model.$parent.$parent.$parent.$parent.main.timelineContentData = []
                                     let info = [{
+                                        'id': model.id,
                                         'type': model.options.typeName,
                                         'subType': model.options.subTypeName,
                                         'hour': model.options.hour,
@@ -137,14 +139,25 @@ export class MainController {
                                 }
                             }
                         }
-                        //console.log(marker)
+                    //set Markers on Map
                     this.map.markers.push(marker)
                 }
             })
         })
     }
 
+
+    /*
+        @param Container(DIV) that needs to be scrolled, ID or Div of the anchor element that should be scrolled to
+        Scrolls to a specific element in the div container
+    */
+    scrollTo(container, anchor) {
+        var element = angular.element(anchor);
+        angular.element(container).animate({scrollTop: element.offset().top}, "slow");
+    }
+
     setPointOnMap(hour) {
+        this.timelineContentData = []
         this.map.markers = []
 
         function toSeconds(t) {
@@ -159,7 +172,7 @@ export class MainController {
                     let horaFinal = toSeconds(mark.Hora_fin + ':00')
                     if (horaClick == horaInicial || (horaInicial <= horaClick && horaClick <= horaFinal)) {
                         var marker = {
-                            id: Date.now(),
+                            id: mark.type + '_' + new Date().valueOf(),
                             coords: {
                                 latitude: mark.lat,
                                 longitude: mark.lon
@@ -181,6 +194,7 @@ export class MainController {
                                     // console.log(model.$parent.$parent.$parent.$parent.main.timelineContentData)
                                     // model.$parent.$parent.$parent.$parent.main.timelineContentData = []
                                     let info = [{
+                                        'id': model.id,
                                         'type': model.options.typeName,
                                         'subType': model.options.subTypeName,
                                         'hour': model.options.hour,
@@ -199,6 +213,21 @@ export class MainController {
                 }
             })
 
+        })
+
+        //set Panel info
+        _.mapValues(this.map.markers, (point) => {
+          let panel = {
+              'id': point.id,
+              'type': point.options.typeName,
+              'subType': point.options.subTypeName,
+              'hour': point.options.hour,
+              'image': point.options.image,
+              'link': 'http://google.com',
+              'text': point.options.title
+          }
+          console.log(panel)
+          this.timelineContentData.push(panel)
         })
 
     }
