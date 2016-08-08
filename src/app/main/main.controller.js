@@ -84,23 +84,8 @@ export class MainController {
             { "latitude": -33.045634, "longitude": -71.612341 }
         ]
 
-        // Linea corte calles <----------------------------|
-        this.corteCalles = [
-            { "latitude": -33.045616, "longitude": -71.612320 },
-            { "latitude": -33.045670, "longitude": -71.608093 },
-            { "latitude": -33.045634, "longitude": -71.607149 },
-            { "latitude": -33.045454, "longitude": -71.605840 },
-            { "latitude": -33.045202, "longitude": -71.605067 },
-            { "latitude": -33.045454, "longitude": -71.605003 },
-            { "latitude": -33.051209, "longitude": -71.602664 },
-            { "latitude": -33.048745, "longitude": -71.612878 },
-            { "latitude": -33.047253, "longitude": -71.612749 },
-            { "latitude": -33.045634, "longitude": -71.612341 }
-        ]
-
         this.routeLineVisible = true
         this.routeCorteVisible = true
-
         this.setMarkers()
         this.timelineContentData = []
 
@@ -161,6 +146,7 @@ export class MainController {
 
     setPointOnMap(hour) {
         this.map.markers = []
+
         function toSeconds(t) {
             var bits = t.split(':')
             return bits[0] * 3600 + bits[1] * 60 + bits[2] * 1
@@ -172,7 +158,6 @@ export class MainController {
                     let horaInicial = toSeconds(point.Hora_ini + ':00')
                     let horaFinal = toSeconds(mark.Hora_fin + ':00')
                     if (horaClick == horaInicial || (horaInicial <= horaClick && horaClick <= horaFinal)) {
-
                         var marker = {
                             id: Date.now(),
                             coords: {
@@ -208,7 +193,6 @@ export class MainController {
                                 }
                             }
                         }
-
                         this.map.markers.push(marker)
                     }
                     //-------->
@@ -1508,9 +1492,11 @@ export class MainController {
                         "intensidad": null
                     }]
                 }
-            ]
->>>>>>> feat(): udpate map
+            ] >>> >>> > feat(): udpate map
         }
+
+
+
 
         return allPoints.points
     }
