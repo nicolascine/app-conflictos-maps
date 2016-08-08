@@ -7,7 +7,9 @@ export function TimelineDirective() {
         scope: {
             allPoints: '=',
             itemClick: '=',
-            map: '='
+            map: '=',
+            setDataInfo: '=',
+            timelineContentData: '='
         },
         controller: timelineController,
         controllerAs: 'vm',

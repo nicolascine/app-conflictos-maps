@@ -148,7 +148,6 @@ export class MainController {
                                         'link': 'http://google.com',
                                         'text': model.options.title
                                     }]
-                                    console.log(model.options.image)
                                     this.setDataInfo(info)
                                 }
                             }
@@ -162,12 +161,10 @@ export class MainController {
 
     setPointOnMap(hour) {
         this.map.markers = []
-
         function toSeconds(t) {
             var bits = t.split(':')
             return bits[0] * 3600 + bits[1] * 60 + bits[2] * 1
         }
-
         _.mapValues(this.points, (point) => {
             _.mapValues(point.markers, (mark) => {
                 if (mark.lat && mark.lon) {
@@ -175,6 +172,7 @@ export class MainController {
                     let horaInicial = toSeconds(point.Hora_ini + ':00')
                     let horaFinal = toSeconds(mark.Hora_fin + ':00')
                     if (horaClick == horaInicial || (horaInicial <= horaClick && horaClick <= horaFinal)) {
+
                         var marker = {
                             id: Date.now(),
                             coords: {
@@ -210,6 +208,7 @@ export class MainController {
                                 }
                             }
                         }
+
                         this.map.markers.push(marker)
                     }
                     //-------->
