@@ -23,6 +23,11 @@
 .timeline-content > li {
     margin-bottom: 20px;
     position: relative;
+    opacity:0.3;
+}
+
+.timeline-content > li.active {
+    opacity:1;
 }
 
 .timeline-content > li:before,
@@ -148,4 +153,17 @@
 
 .timeline-body > p + p {
     margin-top: 5px;
+}
+
+.timeline-body img {
+    margin-bottom: 15px;
+}
+
+.welcome-msg {
+    padding: 15px 0 15px 15px;
+}
+
+.welcome-msg img {
+    margin-bottom:15px;
+    max-width:100%;
 }
