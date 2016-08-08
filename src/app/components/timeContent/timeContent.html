@@ -1,5 +1,14 @@
-<div class="container-time-content">
-    <ul class="timeline-content" ng-if='vm.arrayData'>
+<div class="container-time-content" ng-hide='!!vm.arrayData.length'>
+    <!-- mensaje Inicio -->
+    <div class="welcome-msg">
+        bievenido ...
+        <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate commodi tempora et dignissimos quis minima deserunt veritatis, architecto voluptatum fugiat. Provident ipsum mollitia officia eveniet doloremque sequi magnam, sit velit.
+    </div>
+</div>
+
+<!-- Listado hitos -->
+<div class="container-time-content" ng-show='!!vm.arrayData.length'>
+    <ul class="timeline-content">
         <li ng-repeat="info in vm.arrayData">
             <div class="timeline-badge info"><i class="fa fa-comment" aria-hidden="true"></i></div>
             <div class="timeline-panel">
