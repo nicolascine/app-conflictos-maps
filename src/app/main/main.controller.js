@@ -84,6 +84,37 @@ export class MainController {
             { "latitude": -33.045634, "longitude": -71.612341 }
         ]
 
+        this.locations = [{
+                "latitude": -33.043737,
+                "longitude": -71.622888
+            }, {
+                "latitude": -33.044870,
+                "longitude": -71.623671
+            }, {
+                "latitude": -33.045339,
+                "longitude": -71.622689
+            }, {
+                "latitude": -33.045816,
+                "longitude": -71.622063
+            }, {
+                "latitude": -33.046216,
+                "longitude": -71.621448
+            }, {
+                "latitude": -33.046781,
+                "longitude": -71.619582
+            }, {
+                "latitude": -33.046515,
+                "longitude": -71.619482
+            }, {
+                "latitude": -33.046752,
+                "longitude": -71.618417
+            }, {
+                "latitude": -33.047086,
+                "longitude": -71.614781
+            }
+
+        ]
+
         this.routeLineVisible = true
         this.routeCorteVisible = true
 
@@ -146,7 +177,9 @@ export class MainController {
         })
     }
 
-    //
+
+    // if( hour == point.hourInit || point.hourInit <= hour && hour <= point.hourEnd )
+
 
     setPointOnMap(hour) {
         this.map.markers = []
@@ -155,9 +188,7 @@ export class MainController {
             var bits = t.split(':')
             return bits[0] * 3600 + bits[1] * 60 + bits[2] * 1
         }
-
         _.mapValues(this.points, (point) => {
-
             _.mapValues(point.markers, (mark) => {
                 if (mark.lat && mark.lon) {
                     let horaClick = toSeconds(hour + ':00')
