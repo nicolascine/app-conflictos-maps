@@ -33,21 +33,6 @@ export class MainController {
             markers: []
         }
 
-        // < ui - gmap - polyline visible = "main.routeLineVisible"
-        // path = "main.recorridoMarcha"
-        // draggable = "false"
-        // geodesic = "true"
-        // stroke = "main.map.lineaRecorrido"
-        // fit = "true" >
-
-        //     < ui - gmap - polyline visible = "main.routeCorteVisible"
-        // path = "main.corteCalles"
-        // draggable = "false"
-        // geodesic = "true"
-        // stroke = "main.map.lineCorteCalles"
-        // fit = "true" >
-
-
         this.mapOptions = {
             styles: mapStyleArray,
             mapTypeControl: false,
@@ -100,6 +85,10 @@ export class MainController {
         _.mapValues(info, (item) => {
             console.log(item.id)
             angular.element("#" + item.id).addClass("active")
+            console.log( $('.timeline-content #' + item.id) )
+            $('.timeline-content').animate({
+                 scrollTop: $('.timeline-content #' + item.id).position().top
+            }, 'slow');
         })
     }
 
@@ -148,16 +137,6 @@ export class MainController {
                 }
             })
         })
-    }
-
-
-    /*
-        @param Container(DIV) that needs to be scrolled, ID or Div of the anchor element that should be scrolled to
-        Scrolls to a specific element in the div container
-    */
-    scrollTo(container, anchor) {
-        var element = angular.element(anchor);
-        angular.element(container).animate({ scrollTop: element.offset().top }, "slow");
     }
 
     setPointOnMap(hour) {
@@ -244,6 +223,10 @@ export class MainController {
         this.routeLineVisible = this.routeLineVisible ? false : true
     }
 
+    toggleStret() {
+        this.routeCorteVisible = this.routeCorteVisible ? false : true
+    }
+
     onReady($timeout) {
         $timeout(() => {
             angular.element(document).ready(() => {
@@ -297,7 +280,7 @@ export class MainController {
                         "desc": "Efectivos de Carabineros realiza inspección de seguridad en Dependencias del Congreso Nacional antes de la cuenta anual que realizará la presidenta Bachelet. Las puertas del Parlamento se abren a las 8:00 am.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "01-FOTO736.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "08:35",
@@ -311,7 +294,7 @@ export class MainController {
                         "desc": "Los preparativos de seguridad en las afueras del Congreso. Cerca de 1.700 efectivos de Carabineros se han desplegado en Valparaíso para la jornada.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "02-FOTO743.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "08:30",
@@ -505,7 +488,7 @@ export class MainController {
                         "desc": "Fuerzas Armadas y Carabineros desfilan fuera del Congreso Nacional a poco de que se inicie la cuenta anual de la Presidenta Bachelet.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "",
                         "redes_sociales": "",
                         "Hora_fin": "09:10",
@@ -519,7 +502,7 @@ export class MainController {
                         "desc": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "",
                         "redes_sociales": "https://twitter.com/Carabdechile/status/733999779559145473/photo/1?ref_src=twsrc%5Etfw",
                         "Hora_fin": "09:36",
@@ -614,7 +597,7 @@ export class MainController {
                         "desc": "Comienzan a llegar hasta el frontis del Congreso Nacional manifestantes y partidarios de Michelle Bachelet.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "06-FOTO908.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "10:10",
@@ -628,7 +611,7 @@ export class MainController {
                         "desc": "Presidenta Michelle Bachelet llega al Congreso Nacional a bordo del tradicional Ford Galaxy descapotable.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "08-FOTO918.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "09:35",
@@ -681,7 +664,7 @@ export class MainController {
                         "desc": "Comienza discurso de Presidenta Michelle Bachelet: Presidenta dirige su discurso a los 'ciudadanos y ciudadanas de la patria, a las familias, a los líderes sociales, a los trabajadores, a los empresarios, a los pueblos indígenas'.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "10-FOTO935.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "11:00",
@@ -745,7 +728,7 @@ export class MainController {
                         "desc": "Efectivos de Carabineros comienza a retirar a manifestantes que se encuentran frente al Congreso Nacional.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "12-FOTO1033.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "11:00",
@@ -756,7 +739,7 @@ export class MainController {
                         "desc": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "",
                         "redes_sociales": "https://twitter.com/brionesantonio/status/734027936509112321?ref_src=twsrc%5Etfw",
                         "Hora_fin": "11:33",
@@ -962,7 +945,7 @@ export class MainController {
                         "desc": "Finaliza discurso de la Presidenta Bachelet ante el Congreso Pleno.",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "16-FOTO1102.jpg",
                         "redes_sociales": "",
                         "Hora_fin": "16:00",
@@ -1096,7 +1079,7 @@ export class MainController {
                         "desc": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
-                        "address": "Congreso Nacional,  Pedro Montt 2802",
+                        "address": "Congreso Nacional, Pedro Montt 2802",
                         "media": "",
                         "redes_sociales": "https://twitter.com/T13/status/734045175589150720/photo/1?ref_src=twsrc%5Etfw",
                         "Hora_fin": "12:44",
