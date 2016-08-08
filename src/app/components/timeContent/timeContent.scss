@@ -23,11 +23,70 @@
 .timeline-content > li {
     margin-bottom: 20px;
     position: relative;
-    opacity:0.3;
+}
+
+.timeline-content > li span.marcha {
+    background: url('../../assets/images/icons/marcha.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+}
+
+.timeline-content > li span.barricadas {
+    background: url('../../assets/images/icons/barricada.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+}
+
+.timeline-content > li span.cortes_de_transito {
+    background: url('../../assets/images/icons/corte-transito.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+}
+
+.timeline-content > li span.disposición_policial {
+    background: url('../../assets/images/icons/disposicion-policial.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+}
+
+.timeline-content > li span.enfrentamientos {
+    background: url('../../assets/images/icons/enfrentamiento.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+}
+
+.timeline-content > li span.incendio {
+    background: url('../../assets/images/icons/incendio.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+}
+
+.timeline-content > li span.informacion {
+    background: url('../../assets/images/icons/informacion.svg') center no-repeat;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
 }
 
 .timeline-content > li.active {
     opacity:1;
+}
+
+.timeline-content > li.non-active {
+    opacity:0.3;
 }
 
 .timeline-content > li:before,
