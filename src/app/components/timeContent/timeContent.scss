@@ -97,6 +97,18 @@
     background-size: 20px 20px;
 }
 
+.timeline-content .oficial {
+    background-color:#5cb85c !important;
+}
+
+.timeline-content .incidentes {
+    background-color:#d9534f !important;
+}
+
+.timeline-content .informacion {
+    background-color:#5bc0de !important;
+}
+
 .timeline-content > li.active {
     opacity:1;
 }
