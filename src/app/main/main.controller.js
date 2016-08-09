@@ -143,6 +143,10 @@ export class MainController {
         this.timelineContentData = []
         this.map.markers = []
 
+        angular.element('#sidebar-wrapper').animate({
+            scrollTop: 0,
+        }, 200);
+
         function toSeconds(t) {
             var bits = t.split(':')
             return bits[0] * 3600 + bits[1] * 60 + bits[2] * 1
@@ -198,6 +202,8 @@ export class MainController {
 
         })
 
+        let reverseArray = []
+
         //set Panel info
         _.mapValues(this.map.markers, (point) => {
             let panel = {
@@ -209,10 +215,10 @@ export class MainController {
                 'link': 'http://google.com',
                 'text': point.options.title
             }
-            console.log(panel)
-            this.timelineContentData.push(panel)
+            reverseArray.push(panel)
         })
-
+        reverseArray = reverseArray.reverse()
+        this.timelineContentData = reverseArray
     }
 
     removeAllPoints() {
@@ -1519,9 +1525,6 @@ export class MainController {
                 }
             ]
         }
-
-
-
 
         return allPoints.points
     }
