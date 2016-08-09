@@ -136,7 +136,7 @@ body {
     }
     #sidebar-wrapper {
         width: 350px;
-        margin-top:45px;
+        margin-top: 45px;
     }
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
@@ -179,6 +179,7 @@ body {
 
 .gmnoprint {
     margin-top: 50px;
+    margin-right: 14px !important;
 }
 
 header {
@@ -186,6 +187,7 @@ header {
     opacity: 0.9;
     color: #FFF;
     padding: 5px 15px;
+    padding-right: 8px !important;
     position: fixed;
     z-index: 1000;
     width: 100%;
@@ -198,28 +200,29 @@ header div {
 }
 
 header a {
-    color:#FFF;
-    padding:0 15px;
-    vertical-align:middle;
+    color: #FFF;
+    padding: 0px;
+    vertical-align: middle;
 }
 
-header a:hover, header a:focus {
+header a:hover,
+header a:focus {
     color: #d9534f !important;
 }
 
 .cont-layers {
     background-color: #3F3D48;
     border-radius: 0 0 0 4px;
-    color:#FFF;
-    display:none;
-    position:absolute;
-    top:45px;
-    right:0;
-    width:160px;
+    color: #FFF;
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 160px;
 }
 
 .cont-layers ul {
-    list-style:none;
-    margin:0 0 7px 15px;
-    padding:0;
+    list-style: none;
+    margin: 0 0 7px 15px;
+    padding: 0;
 }
