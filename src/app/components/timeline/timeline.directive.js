@@ -28,8 +28,8 @@ class timelineController {
         this.points = this.allPoints
     }
 
-    getClassName(hour) {
+    getClassName(hour, intensidad) {
         let className = hour.replace(":", "")
-        return 'hour-' + className
-    }
+        return 'hour-' + className + ' ' + 'intensidad-' + intensidad
+      }
 }
