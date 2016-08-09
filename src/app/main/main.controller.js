@@ -149,6 +149,7 @@ export class MainController {
                                 },
                                 typeName: mark.type,
                                 subTypeName: mark.subtype,
+                                redesSocialLink: mark.redes_sociales,
                                 title: mark.desc,
                                 hour: point.Hora_ini,
                                 image: mark.media
@@ -159,6 +160,7 @@ export class MainController {
                                         'id': model.idKey,
                                         'type': model.options.typeName,
                                         'subType': model.options.subTypeName,
+                                        'redesSocialLink': model.options.redes_sociales,
                                         'hour': model.options.hour,
                                         'image': model.options.image,
                                         'link': 'http://google.com',
@@ -217,6 +219,7 @@ export class MainController {
                                 },
                                 typeName: mark.type,
                                 subTypeName: mark.subtype,
+                                redesSocialLink: mark.redes_sociales,
                                 title: mark.desc,
                                 hour: point.Hora_ini,
                                 image: mark.media
@@ -227,6 +230,7 @@ export class MainController {
                                         'id': model.idKey,
                                         'type': model.options.typeName,
                                         'subType': model.options.subTypeName,
+                                        'redesSocialLink': model.options.redes_sociales,
                                         'hour': model.options.hour,
                                         'image': model.options.image,
                                         'link': 'http://google.com',
@@ -248,10 +252,13 @@ export class MainController {
 
         //set Panel info
         _.mapValues(this.map.markers, (point) => {
+
+
             let panel = {
                 'id': point.id,
                 'type': point.options.typeName,
                 'subType': point.options.subTypeName,
+                'redesSocialLink': point.options.redesSocialLink,
                 'hour': point.options.hour,
                 'image': point.options.image,
                 'link': 'http://google.com',
@@ -373,7 +380,7 @@ export class MainController {
                     "lon": -71.60406,
                     "address": "Pedro Montt con Av. Argentina",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/tteinformavalpo/status/733986891834462208/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "733986891834462208",
                     "Hora_fin": "08:52",
                     "intensidad": 1
                 }]
@@ -542,7 +549,7 @@ export class MainController {
                     "lon": -71.6056,
                     "address": "Congreso Nacional,  Pedro Montt 2802",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/Carabdechile/status/733999779559145473/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "733999779559145473",
                     "Hora_fin": "09:36",
                     "intensidad": 2
                 }]
@@ -556,7 +563,7 @@ export class MainController {
                     "lon": -71.621815,
                     "address": "Brasil",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/AVergaraJackson/status/734002004138328064?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734002004138328064",
                     "Hora_fin": "09:44",
                     "intensidad": 2
                 }]
@@ -570,7 +577,7 @@ export class MainController {
                     "lon": null,
                     "address": "Sin asignar",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/UNE_udp/status/734003029691793410?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734003029691793410",
                     "Hora_fin": "09:48",
                     "intensidad": 2
                 }]
@@ -595,7 +602,7 @@ export class MainController {
                     "lon": -71.622207,
                     "address": "Brasil",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/carcamofelipe/status/734005120174850048?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734005120174850048",
                     "Hora_fin": "09:57",
                     "intensidad": 3
                 }]
@@ -623,7 +630,7 @@ export class MainController {
                     "lon": -71.615335,
                     "address": "Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/dhquezada/status/734007149299412993?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734007149299412993",
                     "Hora_fin": "10:05",
                     "intensidad": 3
                 }]
@@ -679,7 +686,7 @@ export class MainController {
                     "lon": -71.62306,
                     "address": "Bellavista",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/tteinformavalpo/status/734013265819381760?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734013265819381760",
                     "Hora_fin": "10:31",
                     "intensidad": 3
                 }]
@@ -693,7 +700,7 @@ export class MainController {
                     "lon": -71.623157,
                     "address": "Bellavista",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/UNE_Chile/status/734009704934957056?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734009704934957056",
                     "Hora_fin": "10:35",
                     "intensidad": 3
                 }, {
@@ -779,7 +786,7 @@ export class MainController {
                     "lon": -71.6056,
                     "address": "Congreso Nacional,  Pedro Montt 2802",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/brionesantonio/status/734027936509112321?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734027936509112321",
                     "Hora_fin": "11:33",
                     "intensidad": 4
                 }]
@@ -821,7 +828,7 @@ export class MainController {
                     "lon": -71.613395,
                     "address": "Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/dhquezada/status/734030865764847618",
+                    "redes_sociales": "734030865764847618",
                     "Hora_fin": "11:39",
                     "intensidad": 5
                 }]
@@ -871,7 +878,7 @@ export class MainController {
                     "lon": -33.046879,
                     "address": "Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/AlexBajista/status/734034326149582849/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734034326149582849",
                     "Hora_fin": "11:53",
                     "intensidad": 5
                 }]
@@ -910,7 +917,7 @@ export class MainController {
                     "lon": -71.605975,
                     "address": "Errázuriz",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/thnoman/status/734035269456953344/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734035269456953344",
                     "Hora_fin": "11:57",
                     "intensidad": 5
                 }]
@@ -957,7 +964,7 @@ export class MainController {
                     "lon": -71.616899,
                     "address": "",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/obsDDHHcl/status/734036087094513664?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734036087094513664",
                     "Hora_fin": "12:00",
                     "intensidad": 5
                 }]
@@ -971,7 +978,7 @@ export class MainController {
                     "lon": -71.617071,
                     "address": "",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/dhquezada/status/734036488971767809?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734036488971767809",
                     "Hora_fin": "12:01",
                     "intensidad": 5
                 }]
@@ -1041,7 +1048,7 @@ export class MainController {
                     "lon": -71.617133,
                     "address": "Las Heras",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/dhquezada/status/734041062872907776/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734041062872907776",
                     "Hora_fin": "11:20",
                     "intensidad": 5
                 }]
@@ -1119,7 +1126,7 @@ export class MainController {
                     "lon": -71.6056,
                     "address": "Congreso Nacional,  Pedro Montt 2802",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/T13/status/734045175589150720/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734045175589150720",
                     "Hora_fin": "12:44",
                     "intensidad": 5
                 }]
@@ -1133,7 +1140,7 @@ export class MainController {
                     "lon": -71.606007,
                     "address": "",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/BombaAustria/status/734042876410245120?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734042876410245120",
                     "Hora_fin": "12:47",
                     "intensidad": 5
                 }]
@@ -1214,7 +1221,7 @@ export class MainController {
                     "lon": -71.619907,
                     "address": "Plaza Victoria",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/obsDDHHcl/status/734051069593059332/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734051069593059332",
                     "Hora_fin": "12:58",
                     "intensidad": 5
                 }]
@@ -1298,7 +1305,7 @@ export class MainController {
                     "lon": -71.629079,
                     "address": "Plaza Sotomayor",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/presidencia_cl/status/734057791749382144?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734057791749382144",
                     "Hora_fin": "13:26",
                     "intensidad": 4
                 }]
@@ -1354,7 +1361,7 @@ export class MainController {
                     "lon": -71.619907,
                     "address": "Plaza Victoria",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/T13/status/734061618859024386/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734061618859024386",
                     "Hora_fin": "13:42",
                     "intensidad": 4
                 }]
@@ -1368,7 +1375,7 @@ export class MainController {
                     "lon": -71.618457,
                     "address": "Carrera con Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/Tele13_Radio/status/734065390981140480?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734065390981140480",
                     "Hora_fin": "13:56",
                     "intensidad": 4
                 }]
@@ -1410,7 +1417,7 @@ export class MainController {
                     "lon": -71.616607,
                     "address": "Chacabuco",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/Cami_RojasV/status/734068498528227328?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734068498528227328",
                     "Hora_fin": "14:09",
                     "intensidad": 4
                 }]
@@ -1424,7 +1431,7 @@ export class MainController {
                     "lon": -71.629079,
                     "address": "Plaza Sotomayor",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/T13/status/734070095744512001/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734070095744512001",
                     "Hora_fin": "14:15",
                     "intensidad": 4
                 }]
@@ -1452,7 +1459,7 @@ export class MainController {
                     "lon": -71.606318,
                     "address": "Congreso Nacional",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/jplchile/status/734076225447202818?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734076225447202818",
                     "Hora_fin": "14:39",
                     "intensidad": 4
                 }]
@@ -1480,7 +1487,7 @@ export class MainController {
                     "lon": -71.617253,
                     "address": "Pedro Montt con Las Heras",
                     "media": "",
-                    "redes_sociales": "https://twitter.com/dhquezada/status/734077788764921856/photo/1?ref_src=twsrc%5Etfw",
+                    "redes_sociales": "734077788764921856",
                     "Hora_fin": "14:35",
                     "intensidad": 2
                 }]
@@ -1584,8 +1591,6 @@ export class MainController {
                 }]
             }]
         }
-        return allPoints.points
-
         return allPoints.points
     }
 
