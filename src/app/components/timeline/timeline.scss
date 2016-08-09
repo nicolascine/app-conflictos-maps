@@ -288,15 +288,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', e
 
 .categorias ul {
     list-style: none;
-    margin: 0;
+    margin: 5px 0 0 0;
     padding: 0;
 }
 
 .categorias ul li {
-    margin-bottom: -10px;
 }
 
 .categorias img {
-    height: 30px;
-    margin-bottom: 3px;
+    height: 14px;
+    margin-right: 10px;
 }

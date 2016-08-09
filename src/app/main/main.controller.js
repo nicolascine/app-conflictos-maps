@@ -153,8 +153,8 @@ export class MainController {
                             options: {
                                 icon: {
                                     url: 'assets/images/' + mark.type + '.png',
-                                    anchor: new google.maps.Point(25, 50),
-                                    scaledSize: new google.maps.Size(50, 50)
+                                    anchor: new google.maps.Point(25, 20),
+                                    scaledSize: new google.maps.Size(20, 20)
                                 },
                                 typeName: mark.type,
                                 subTypeName: mark.subtype,
