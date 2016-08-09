@@ -5,9 +5,11 @@
     </div>
     <div id="cont-layers" class="cont-layers">
         <ul>
-            <li><label><input type="checkbox" checked> Oficial</label></li>
-            <li><label><input type="checkbox" checked> Incidentes</label></li>
-            <li><label><input type="checkbox" checked> Redes sociales</label></li>
+            <li><label><input type="checkbox" checked ng-click="main.toggleOficial()"> Oficial</label></li>
+            <li><label><input type="checkbox" checked ng-click="main.toggleIncidentes()"> Incidentes</label></li>
+            <li><label><input type="checkbox" checked ng-click="main.toggleInformacion()"> Informacion</label></li>
+            <li><label><input type="checkbox" checked ng-click="main.toggleRuta()"> Ruta Autorizada</label></li>
+            <li><label><input type="checkbox" checked ng-click="main.toggleCorteTransito()"> Corte Tránsito</label></li>
         </ul>
     </div>
 
