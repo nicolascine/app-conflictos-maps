@@ -59,9 +59,9 @@
     }
     /* ---- Timeline ---- */
     .box-timeline {
-        height: 60px;
+        height: 90px;
         overflow-y: scroll;
-        padding-top: 12px;
+        padding-top: 30px;
         //steps
         .timeline {
             list-style-type: none;
@@ -73,6 +73,7 @@
         }
         .li {
             transition: all 200ms ease-in;
+            position: relative;
         }
         .timestamp {
             margin-bottom: 20px;
@@ -129,6 +130,80 @@
                 display: inline;
             }
         }
+        // Intensidad --------------------------------- >
+        li.intensidad-0:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f00;
+            left: 30%;
+            border-radius: 50px;
+            opacity: 0;
+            top: -23px;
+        }
+        li.intensidad-1:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f00;
+            left: 30%;
+            border-radius: 50px;
+            opacity: 0.1;
+            top: -23px;
+        }
+        li.intensidad-2:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f00;
+            left: 30%;
+            border-radius: 50px;
+            opacity: 0.2;
+            top: -23px;
+        }
+        li.intensidad-3:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f00;
+            left: 30%;
+            border-radius: 50px;
+            opacity: 0.3;
+            top: -23px;
+        }
+        li.intensidad-4:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f00;
+            left: 30%;
+            border-radius: 50px;
+            opacity: 0.4;
+            top: -23px;
+        }
+        li.intensidad-5:before {
+            content: " ";
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #f00;
+            left: 30%;
+            border-radius: 50px;
+            opacity: 0.5;
+            top: -23px;
+        }
+        // < ------------------------------------------------- Intensidad
         a .li.complete .status {
             border-top: 2px solid #d7dad8;
         }
