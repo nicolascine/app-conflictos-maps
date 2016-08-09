@@ -6,6 +6,7 @@
     position: fixed;
     .panel-group {
         margin: 0px;
+        text-align: right;
     }
     .panel-body {
         border-top:none !important;
@@ -167,6 +168,8 @@
     opacity: 1 !important;
     padding: 3px 10px 10px 10px;
     width: 155px;
+    text-align: left;
+    display: inline-block;
 }
 
 .categorias ul {
