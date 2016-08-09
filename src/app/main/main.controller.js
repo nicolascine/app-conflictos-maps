@@ -26,7 +26,7 @@ export class MainController {
                 opacity: 0.7
             },
             lineaCorteCalles: {
-                color: '#337ab7',
+                color: '#f9524e',
                 weight: 5,
                 opacity: 0.7
             },

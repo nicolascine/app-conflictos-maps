@@ -7,9 +7,10 @@
     .panel-group {
         margin: 0px;
         text-align: right;
+        position: relative;
     }
     .panel-body {
-        border-top:none !important;
+        border-top: none !important;
         margin: 0px;
         padding: 0px;
         background-color: #3F3D48;
@@ -91,7 +92,7 @@
             margin-bottom: 0px;
         }
         .status h4 {
-            font-size:13px;
+            font-size: 13px;
         }
         .status:before {
             content: "";
@@ -105,7 +106,6 @@
             left: 42%;
             transition: all 200ms ease-in;
         }
-
         li.hour-0700 .status,
         li.hour-0800 .status,
         li.hour-0900 .status,
@@ -123,7 +123,7 @@
                 width: 10px;
                 height: 10px;
                 border-radius: 25px;
-                background-color:#d9534f !important;
+                background-color: #d9534f !important;
             }
             h4 {
                 display: inline;
@@ -163,13 +163,17 @@
         }
     }
 }
+
 .categorias {
-    margin-left: 15px;
-    opacity: 1 !important;
-    padding: 3px 10px 10px 10px;
+    right: 0px;
+    top: -173px;
     width: 155px;
     text-align: left;
+    margin-right: 13px;
+    position: absolute;
+    opacity: 1 !important;
     display: inline-block;
+    padding: 3px 10px 10px 10px;
 }
 
 .categorias ul {
@@ -179,7 +183,7 @@
 }
 
 .categorias ul li {
-    margin-bottom:-10px;
+    margin-bottom: -10px;
 }
 
 .categorias img {
