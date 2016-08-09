@@ -135,49 +135,49 @@
             content: " ";
             display: block;
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 20px;
+            height: 20px;
             background: #f00;
-            left: 30%;
-            border-radius: 50px;
-            opacity: 0;
-            top: -23px;
+            left: 18%;
+            border-radius: 20px;
+            opacity: 0.1;
+            top: -10px;
         }
         li.intensidad-1:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 20px;
+            height: 20px;
             background: #f00;
-            left: 30%;
-            border-radius: 50px;
+            left: 18%;
+            border-radius: 20px;
             opacity: 0.1;
-            top: -23px;
+            top: -10px;
         }
         li.intensidad-2:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 30px;
+            height: 30px;
             background: #f00;
-            left: 30%;
-            border-radius: 50px;
+            left: 17%;
+            border-radius: 30px;
             opacity: 0.2;
-            top: -23px;
+            top: -15px;
         }
         li.intensidad-3:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background: #f00;
-            left: 30%;
-            border-radius: 50px;
+            left: -10%;
+            border-radius: 40px;
             opacity: 0.3;
-            top: -23px;
+            top: -21px;
         }
         li.intensidad-4:before {
             content: " ";
@@ -186,22 +186,22 @@
             width: 50px;
             height: 50px;
             background: #f00;
-            left: 30%;
+            left: -22%;
             border-radius: 50px;
             opacity: 0.4;
-            top: -23px;
+            top: -25px;
         }
         li.intensidad-5:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             background: #f00;
-            left: 30%;
-            border-radius: 50px;
+            left: -22%;
+            border-radius: 60px;
             opacity: 0.5;
-            top: -23px;
+            top: -28px;
         }
         // < ------------------------------------------------- Intensidad
         a .li.complete .status {
