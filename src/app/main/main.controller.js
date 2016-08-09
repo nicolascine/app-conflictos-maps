@@ -176,6 +176,15 @@ export class MainController {
     }
 
     setPointOnMap(hour) {
+
+        this.routeLineVisible = true
+        this.routeCorteVisible = true
+        this.iconOficial = true
+        this.iconIncidentes = true
+        this.iconInformacion = true
+
+        angular.element('#cont-layers input[type="checkbox"]').prop('checked', true)
+
         this.timelineContentData = []
         this.map.markers = []
 
