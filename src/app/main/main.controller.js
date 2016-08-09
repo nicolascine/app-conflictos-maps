@@ -322,7 +322,7 @@ export class MainController {
                     "Hora_ini": "07:52",
                     "markers": [{
                         "type": "oficial",
-                        "subtype": "cortes de tránsito",
+                        "subtype": "cortes_de_transito",
                         "desc": "Calles de Valparaíso ya están con cortes de tránsito",
                         "lat": null,
                         "lon": null,
@@ -347,7 +347,7 @@ export class MainController {
                     "Hora_ini": "08:00",
                     "markers": [{
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada (Francia con Yungay).",
                         "lat": -33.045616,
                         "lon": -71.612299,
@@ -358,7 +358,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada (Yungay con Avenida España).",
                         "lat": -33.045229,
                         "lon": -71.605025,
@@ -369,7 +369,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada (Avenida España con Independencia).",
                         "lat": -33.051227,
                         "lon": -71.602708,
@@ -380,7 +380,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada (Independencia con Avenida Francia).",
                         "lat": -33.04879,
                         "lon": -71.6129,
@@ -391,7 +391,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada.",
                         "lat": -33.04728,
                         "lon": -71.612771,
@@ -402,7 +402,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada.",
                         "lat": -33.047091,
                         "lon": -71.614638,
@@ -413,7 +413,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada.",
                         "lat": -33.049294,
                         "lon": -71.61511,
@@ -424,7 +424,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada.",
                         "lat": -33.048305,
                         "lon": -71.619037,
@@ -435,7 +435,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada.",
                         "lat": -33.042828,
                         "lon": -71.623715,
@@ -446,7 +446,7 @@ export class MainController {
                         "intensidad": 2
                     }, {
                         "type": "oficial",
-                        "subtype": "disposición policial",
+                        "subtype": "disposición_policial",
                         "desc": "Piquetes de Carabineros toman posición a la espera de las actividades dispuestas para esta jornada.",
                         "lat": -33.044995,
                         "lon": -71.615947,
