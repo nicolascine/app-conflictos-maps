@@ -8,11 +8,18 @@
         margin: 0px;
     }
     .panel-body {
+        border-top:none !important;
         margin: 0px;
         padding: 0px;
+        background-color: #3F3D48;
+        color: #FFF;
+    }
+    .panel-default {
+        opacity: 0.9;
     }
     .panel-default > .panel-heading {
-        background: white;
+        background-color: #3F3D48;
+        color: #FFF;
         position: relative;
         &:after {
             top: 6px;
@@ -50,9 +57,9 @@
     }
     /* ---- Timeline ---- */
     .box-timeline {
-        height: 100px;
+        height: 60px;
         overflow-y: scroll;
-        padding-top: 40px;
+        padding-top: 12px;
         //steps
         .timeline {
             list-style-type: none;
@@ -83,18 +90,17 @@
             margin-bottom: 0px;
         }
         .status h4 {
-            font-weight: 600;
-            //display: none;
+            font-size:13px;
         }
         .status:before {
             content: "";
-            width: 2px;
-            height: 28px;
+            width: 1px;
+            height: 10px;
             background-color: #fff;
             margin-bottom: 39px;
             border: 1px solid #ddd;
             position: absolute;
-            top: -15px;
+            top: -6px;
             left: 42%;
             transition: all 200ms ease-in;
         }
@@ -113,9 +119,10 @@
         li.hour-1800 .status {
             margin-bottom: 0px;
             &:before {
-                width: 25px;
-                height: 25px;
+                width: 10px;
+                height: 10px;
                 border-radius: 25px;
+                background-color:#d9534f !important;
             }
             h4 {
                 display: inline;
@@ -157,8 +164,9 @@
 }
 .categorias {
     margin-left: 15px;
+    opacity: 1 !important;
     padding: 3px 10px 10px 10px;
-    width: 135px;
+    width: 155px;
 }
 
 .categorias ul {
