@@ -73,6 +73,7 @@ export class MainController {
         this.iconOficial = true
         this.iconIncidentes = true
         this.iconInformacion = true
+        this.firstOpenPanel = true
         this.timelineContentData = []
         this.setMarkers()
 
@@ -130,7 +131,6 @@ export class MainController {
                 } else {
                     scrollTopValue = 0
                 }
-
                 angular.element('.timeline-content').find('li#' + item.id).removeClass('non-active').addClass('active')
                 angular.element('.timeline-content').find('li').not('#' + item.id).addClass('non-active')
                 angular.element('#sidebar-wrapper').animate({
@@ -165,6 +165,31 @@ export class MainController {
                             },
                             events: {
                                 click: (marker, eventName, model) => {
+                                    if (this.firstOpenPanel) {
+                                        console.info("this.firstOpenPanel = false")
+                                        console.info("this.firstOpenPanel = false")
+                                        console.info("this.firstOpenPanel = false")
+                                        console.info("this.firstOpenPanel = false")
+                                        this.firstOpenPanel = false
+                                        let reverseArray = []
+                                            //set Panel info
+                                        _.mapValues(this.map.markers, (point) => {
+                                            let panel = {
+                                                'id': point.id,
+                                                'type': point.options.typeName,
+                                                'subType': point.options.subTypeName,
+                                                'redesSocialLink': point.options.redesSocialLink,
+                                                'hour': point.options.hour,
+                                                'image': point.options.image,
+                                                'link': 'http://google.com',
+                                                'text': point.options.title
+                                            }
+                                            reverseArray.push(panel)
+                                        })
+                                        reverseArray = reverseArray.reverse()
+                                        this.timelineContentData = reverseArray
+
+                                    }
                                     let info = [{
                                         'id': model.idKey,
                                         'type': model.options.typeName,
@@ -258,11 +283,8 @@ export class MainController {
         })
 
         let reverseArray = []
-
-        //set Panel info
+            //set Panel info
         _.mapValues(this.map.markers, (point) => {
-
-
             let panel = {
                 'id': point.id,
                 'type': point.options.typeName,
@@ -278,6 +300,8 @@ export class MainController {
         reverseArray = reverseArray.reverse()
         this.timelineContentData = reverseArray
     }
+
+
 
     removeAllPoints() {
         this.map.markers = []
