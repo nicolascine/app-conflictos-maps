@@ -203,6 +203,10 @@ header a {
     vertical-align:middle;
 }
 
+header a:hover, header a:focus {
+    color: #d9534f !important;
+}
+
 .cont-layers {
     background-color: #3F3D48;
     border-radius: 0 0 0 4px;
