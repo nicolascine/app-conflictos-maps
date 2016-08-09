@@ -70,27 +70,47 @@ export class MainController {
 
         this.routeLineVisible = true
         this.routeCorteVisible = true
+        this.iconOficial = true
+        this.iconIncidentes = true
+        this.iconInformacion = true
         this.timelineContentData = []
         this.setMarkers()
 
     }
 
-
     toggleOficial() {
-        //this.XXX = this.XXX ? false : true
+        this.iconOficial = this.iconOficial ? false : true
         _.mapValues(this.map.markers, (item) => {
-            if (item.options.subTypeName == "información prensa") {
-                console.log(item)
+            if (item.options.typeName == "oficial" && this.iconOficial) {
+                item.options.icon.url = "assets/images/oficial.png"
+            } else if (item.options.typeName == "oficial" && !this.iconOficial) {
+                item.options.icon.url = "assets/images/blank.png"
             }
         })
     }
 
     toggleIncidentes() {
-        this.XXX = this.XXX ? false : true
+        this.iconIncidentes = this.iconIncidentes ? false : true
+        _.mapValues(this.map.markers, (item) => {
+            if (item.options.typeName == "incidentes" && this.iconIncidentes) {
+                item.options.icon.url = "assets/images/incidentes.png"
+            } else if (item.options.typeName == "incidentes" && !this.iconIncidentes) {
+                item.options.icon.url = "assets/images/blank.png"
+            }
+        })
     }
+
     toggleInformacion() {
-        this.XXX = this.XXX ? false : true
+        this.iconInformacion = this.iconInformacion ? false : true
+        _.mapValues(this.map.markers, (item) => {
+            if (item.options.typeName == "informacion" && this.iconInformacion) {
+                item.options.icon.url = "assets/images/informacion.png"
+            } else if (item.options.typeName == "informacion" && !this.iconInformacion) {
+                item.options.icon.url = "assets/images/blank.png"
+            }
+        })
     }
+
     toggleRuta() {
         this.routeLineVisible = this.routeLineVisible ? false : true
     }
@@ -1555,6 +1575,7 @@ export class MainController {
                 }]
             }]
         }
+        return allPoints.points
 
         return allPoints.points
     }
