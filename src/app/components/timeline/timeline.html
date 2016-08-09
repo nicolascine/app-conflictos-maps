@@ -11,6 +11,7 @@
   </div>
     <div uib-accordion-group class="panel-default" ng-init="status.open = true" is-open="status.open">
         <div class="box-timeline">
+        <span class="inten">Intensidad</span>
             <ul class="timeline" id="timeline">
                 <li class="li complete" ng-repeat="point in vm.points" ng-class="vm.getClassName(point.Hora_ini, point.markers[0].intensidad)">
                   <div class="status">
