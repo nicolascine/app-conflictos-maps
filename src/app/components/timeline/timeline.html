@@ -3,13 +3,13 @@
     <ul>
       <li><span><img src="../../assets/images/oficial.png"></span>Oficial</li>
       <li><span><img src="../../assets/images/incidentes.png"></span>Incidentes</li>
-      <li><span><img src="../../assets/images/informacion.png"></span>Redes sociales</li>
+      <li><span><img src="../../assets/images/informacion.png"></span>Información</li>
       <li><hr></li>
       <li><span><img src="../../assets/images/ruta.png"></span>Ruta marcha</li>
       <li><span><img src="../../assets/images/corte-transito.png"></span>Cortes de tránsito</li>
     </ul>
   </div>
-    <div uib-accordion-group class="panel-default" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+    <div uib-accordion-group class="panel-default" ng-init="status.open = true" is-open="status.open">
         <div class="box-timeline">
             <ul class="timeline" id="timeline">
                <!-- <li ng-repeat="point in vm.points" ng-class="vm.getClassName(point.hour)">{{point.hour}}</li>-->
