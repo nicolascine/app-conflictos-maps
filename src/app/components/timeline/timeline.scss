@@ -31,7 +31,14 @@
             content: "\f106";
             position: absolute;
             font: normal normal normal 14px/1 FontAwesome;
-            color: yellow !important;
+        }
+    }
+    .panel-default.panel.panel-default.panel-open > .panel-heading {
+        background-color: #3F3D48;
+        color: #FFF;
+        position: relative;
+        &:after {
+            transform: rotate(180deg) !important;
         }
     }
     .panel-heading {

@@ -75,6 +75,7 @@ export class MainController {
         this.iconInformacion = true
         this.firstOpenPanel = true
         this.timelineContentData = []
+        this.btnToggle = true
         this.setMarkers()
 
     }
@@ -117,6 +118,13 @@ export class MainController {
     }
     toggleCorteTransito() {
         this.routeCorteVisible = this.routeCorteVisible ? false : true
+    }
+
+
+
+    toggleButton(){
+      console.log(" el toggle es --->" + this.btnToggle)
+      this.btnToggle = this.btnToggle ? false : true
     }
 
 
