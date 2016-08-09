@@ -280,7 +280,7 @@ export class MainController {
                     "Hora_ini": "07:00",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Efectivos de Carabineros realiza inspección de seguridad en Dependencias del Congreso Nacional antes de la cuenta anual que realizará la presidenta Bachelet. Las puertas del Parlamento se abren a las 8:00 am.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -294,7 +294,7 @@ export class MainController {
                     "Hora_ini": "07:43",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Los preparativos de seguridad en las afueras del Congreso. Cerca de 1.700 efectivos de Carabineros se han desplegado en Valparaíso para la jornada.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -308,7 +308,7 @@ export class MainController {
                     "Hora_ini": "07:49",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Ministros comienzan a llegar a Cerro Castillo para la foto oficial.Cerca de las 8:15 será la fotografía oficial de la Presidenta Michelle Bachelet y su gabinete.",
                         "lat": -33.02003,
                         "lon": -71.564443,
@@ -333,7 +333,7 @@ export class MainController {
                         "intensidad": 1
                     }, {
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": null,
                         "lon": null,
@@ -460,7 +460,7 @@ export class MainController {
                     "Hora_ini": "08:23",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Presidenta Michelle Bachelet se toma la foto oficial junto a su gabinete. La Presidenta mantiene prácticamente su mismo equipo salvo dos excepciones: el ex ministro de la Segpres, Jorge Insunza, quien salió del cargo el 7 de junio de 2015. En su reemplazo asumió Nicolás Eyzaguirre, quien dejó el ministerio de Educación, y Adriana Delpiano ingresó al gabinete.",
                         "lat": -33.02003,
                         "lon": -71.564443,
@@ -474,7 +474,7 @@ export class MainController {
                     "Hora_ini": "08:25",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Equipo motorizado de Carabineros se rehúne para coordinar operativos de seguridad.",
                         "lat": -33.047262,
                         "lon": -71.605967,
@@ -488,7 +488,7 @@ export class MainController {
                     "Hora_ini": "08:35",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Fuerzas Armadas y Carabineros desfilan fuera del Congreso Nacional a poco de que se inicie la cuenta anual de la Presidenta Bachelet.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -502,7 +502,7 @@ export class MainController {
                     "Hora_ini": "08:36",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -516,7 +516,7 @@ export class MainController {
                     "Hora_ini": "08:44",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": null,
                         "lon": null,
@@ -530,7 +530,7 @@ export class MainController {
                     "Hora_ini": "08:48",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": null,
                         "lon": null,
@@ -555,7 +555,7 @@ export class MainController {
                         "intensidad": 3
                     }, {
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": null,
                         "lon": null,
@@ -583,7 +583,7 @@ export class MainController {
                     "Hora_ini": "09:05",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": null,
                         "lon": null,
@@ -597,7 +597,7 @@ export class MainController {
                     "Hora_ini": "09:08",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Comienzan a llegar hasta el frontis del Congreso Nacional manifestantes y partidarios de Michelle Bachelet.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -611,7 +611,7 @@ export class MainController {
                     "Hora_ini": "09:18",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Presidenta Michelle Bachelet llega al Congreso Nacional a bordo del tradicional Ford Galaxy descapotable.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -639,7 +639,7 @@ export class MainController {
                     "Hora_ini": "09:31",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.044007,
                         "lon": -71.62306,
@@ -653,7 +653,7 @@ export class MainController {
                     "Hora_ini": "09:35",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.044137,
                         "lon": -71.623157,
@@ -664,7 +664,7 @@ export class MainController {
                         "intensidad": 3
                     }, {
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Comienza discurso de Presidenta Michelle Bachelet: Presidenta dirige su discurso a los 'ciudadanos y ciudadanas de la patria, a las familias, a los líderes sociales, a los trabajadores, a los empresarios, a los pueblos indígenas'.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -728,7 +728,7 @@ export class MainController {
                     "Hora_ini": "10:33",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "información prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Efectivos de Carabineros comienza a retirar a manifestantes que se encuentran frente al Congreso Nacional.",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -739,7 +739,7 @@ export class MainController {
                         "intensidad": 4
                     }, {
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -781,7 +781,7 @@ export class MainController {
                     "Hora_ini": "10:39",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.047213,
                         "lon": -71.613395,
@@ -831,7 +831,7 @@ export class MainController {
                     "Hora_ini": "10:53",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.046879,
                         "lon": -33.046879,
@@ -870,7 +870,7 @@ export class MainController {
                     "Hora_ini": "10:57",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.043805,
                         "lon": -71.605975,
@@ -917,7 +917,7 @@ export class MainController {
                         "intensidad": 5
                     }, {
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.046007,
                         "lon": -71.616899,
@@ -931,7 +931,7 @@ export class MainController {
                     "Hora_ini": "11:01",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.046839,
                         "lon": -71.617071,
@@ -1001,7 +1001,7 @@ export class MainController {
                     "Hora_ini": "11:20",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.047,
                         "lon": -71.617133,
@@ -1015,7 +1015,7 @@ export class MainController {
                     "Hora_ini": "11:26",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "oficial",
+                        "subtype": "informacion_oficial",
                         "desc": "El Alcalde de Valparaíso, Jorge Castro, aseguró que 'las pérdidas son millonarias' tras incendio en edificio municipal. 'Hay tres locales comerciales quemados. Estamos cometiendo un grueso error sobre seguir estas prácticas en Valparaíso', afirmó, reiterando sus críticas a que la cuenta pública se realice en la ciudad",
                         "lat": -33.052548,
                         "lon": -71.602669,
@@ -1079,7 +1079,7 @@ export class MainController {
                         "intensidad": 5
                     }, {
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.047782,
                         "lon": -71.6056,
@@ -1093,7 +1093,7 @@ export class MainController {
                     "Hora_ini": "11:47",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.045498,
                         "lon": -71.606007,
@@ -1107,7 +1107,7 @@ export class MainController {
                     "Hora_ini": "11:52",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Como el funcionario municipal Eduardo Lara fue identificada la personas rescatada por bomberos desde el edificio siniestrado en calle Montt.",
                         "lat": -33.04686,
                         "lon": -71.616961,
@@ -1160,7 +1160,7 @@ export class MainController {
                     "Hora_ini": "11:58",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "oficial",
+                        "subtype": "informacion_oficial",
                         "desc": "Comandante de Bomberos descarta presencia de nuevos trabajadores en incendios.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -1174,7 +1174,7 @@ export class MainController {
                     "Hora_ini": "11:59",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.046304,
                         "lon": -71.619907,
@@ -1202,7 +1202,7 @@ export class MainController {
                     "Hora_ini": "12:08",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Guardia municipal es traladado hasta el hospital Van Buren donde continúan los trabajos de reanimación.",
                         "lat": -33.050728,
                         "lon": -71.610771,
@@ -1216,7 +1216,7 @@ export class MainController {
                     "Hora_ini": "12:11",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "oficial",
+                        "subtype": "informacion_oficial",
                         "desc": "En la Gobernación de Valparaíso, el Ministerio del Interior confirma muerte de ​Eduardo Lara, trabajador asfixiado en incendio.",
                         "lat": -33.043284,
                         "lon": -71.623729,
@@ -1230,7 +1230,7 @@ export class MainController {
                     "Hora_ini": "12:19",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "oficial",
+                        "subtype": "informacion_oficial",
                         "desc": "Autoridades del Hospital Carlos van Buren informan del fallecimiento del guardia municipal Eduardo Lara como consecuencia de las lesiones sufridas en el incendio que fue iniciado por encapuchados.",
                         "lat": -33.050728,
                         "lon": -71.610771,
@@ -1244,7 +1244,7 @@ export class MainController {
                     "Hora_ini": "12:21",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Fiscal jefe de Valparaíso confirma muerte de trabajador: 'Estamos en la presencia de un incendio intencional. A raíz del mismo habría provocado la muerte de esta persona'.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -1258,7 +1258,7 @@ export class MainController {
                     "Hora_ini": "12:26",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.038681,
                         "lon": -71.629079,
@@ -1272,7 +1272,7 @@ export class MainController {
                     "Hora_ini": "12:31",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "oficial",
+                        "subtype": "informacion_oficial",
                         "desc": "Gobierno anuncia acciones legales 'para perseguir la responsabilidad de quienes provocaron estos hechos'.",
                         "lat": -33.038681,
                         "lon": -71.629079,
@@ -1286,7 +1286,7 @@ export class MainController {
                     "Hora_ini": "12:38",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Autoridades confirman detenidos por incendio que terminó con muerte de Eduardo Lara.",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -1314,7 +1314,7 @@ export class MainController {
                     "Hora_ini": "12:42",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.046304,
                         "lon": -71.619907,
@@ -1328,7 +1328,7 @@ export class MainController {
                     "Hora_ini": "12:56",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.046743,
                         "lon": -71.618457,
@@ -1370,7 +1370,7 @@ export class MainController {
                     "Hora_ini": "13:15",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.038681,
                         "lon": -71.629079,
@@ -1398,7 +1398,7 @@ export class MainController {
                     "Hora_ini": "13:41",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Alcalde de Valparaíso por muerte de guardia: 'Hay responsabilidades políticas'",
                         "lat": -33.052521,
                         "lon": -71.602691,
@@ -1412,7 +1412,7 @@ export class MainController {
                     "Hora_ini": "13:45",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion ciudadana",
+                        "subtype": "informacion_ciudadana",
                         "desc": "",
                         "lat": -33.04701,
                         "lon": -71.617253,
@@ -1426,7 +1426,7 @@ export class MainController {
                     "Hora_ini": "13:53",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "informacion prensa",
+                        "subtype": "informacion_prensa",
                         "desc": "Intendente de Valparaíso confirma que hay 19 detenidos y se espera que entre ellos se pueda identificar a culpables de iniciar incendio",
                         "lat": -33.042935,
                         "lon": -71.623585,
@@ -1454,7 +1454,7 @@ export class MainController {
                     "Hora_ini": "14:13",
                     "markers": [{
                         "type": "informacion",
-                        "subtype": "oficial",
+                        "subtype": "informacion_oficial",
                         "desc": "Carabineros entrega cuenta preliminar sobre incidentes en Valparaíso: 26 hombres adultos, 7 mujeres, 4 menores: Total  37",
                         "lat": -33.04686,
                         "lon": -71.619401,
