@@ -651,7 +651,7 @@ export class MainController {
                     "media": "",
                     "redes_sociales": "",
                     "Hora_fin": "00:00",
-                    "intensidad": null
+                    "intensidad": 3
                 }]
             }, {
                 "Hora_ini": "09:05",
@@ -760,7 +760,7 @@ export class MainController {
                     "media": "",
                     "redes_sociales": "",
                     "Hora_fin": "00:00",
-                    "intensidad": null
+                    "intensidad": 3
                 }]
             }, {
                 "Hora_ini": "10:21",
@@ -1424,7 +1424,7 @@ export class MainController {
                     "media": "",
                     "redes_sociales": "",
                     "Hora_fin": "00:00",
-                    "intensidad": null
+                    "intensidad": 4
                 }]
             }, {
                 "Hora_ini": "13:07",
@@ -1550,7 +1550,7 @@ export class MainController {
                     "media": "",
                     "redes_sociales": "",
                     "Hora_fin": "00:00",
-                    "intensidad": null
+                    "intensidad": 2
                 }]
             }, {
                 "Hora_ini": "14:13",
@@ -1620,7 +1620,7 @@ export class MainController {
                     "media": "",
                     "redes_sociales": "",
                     "Hora_fin": "00:00",
-                    "intensidad": null
+                    "intensidad": 1
                 }]
             }]
         }
