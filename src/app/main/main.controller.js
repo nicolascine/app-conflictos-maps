@@ -643,7 +643,7 @@ export class MainController {
                     "lat": -33.047782,
                     "lon": -71.6056,
                     "address": "Congreso Nacional,  Pedro Montt 2802",
-                    "media": "06-FOTO908.jpg",
+                    "media": "07-FOTO908.jpg",
                     "redes_sociales": "",
                     "Hora_fin": "10:10",
                     "intensidad": 3
