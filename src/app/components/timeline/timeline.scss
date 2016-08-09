@@ -61,7 +61,7 @@
     .box-timeline {
         height: 90px;
         overflow-y: scroll;
-        padding-top: 30px;
+        padding-top: 50px;
         //steps
         .timeline {
             list-style-type: none;
@@ -135,11 +135,11 @@
             content: " ";
             display: block;
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #f00;
+            width: 30px;
+            height: 10px;
+            background: #d9534f;
+            border-radius:4px 4px 0 0;
             left: 18%;
-            border-radius: 20px;
             opacity: 0.1;
             top: -10px;
         }
@@ -147,11 +147,11 @@
             content: " ";
             display: block;
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background: #f00;
-            left: 18%;
-            border-radius: 20px;
+            width: 30px;
+            height: 10px;
+            background: #d9534f;
+            border-radius:4px 4px 0 0;
+            left: 5%;
             opacity: 0.1;
             top: -10px;
         }
@@ -160,48 +160,48 @@
             display: block;
             position: absolute;
             width: 30px;
-            height: 30px;
-            background: #f00;
-            left: 17%;
-            border-radius: 30px;
+            height: 20px;
+            background: #d9534f;
+            border-radius:4px 4px 0 0;
+            left: 5%;
             opacity: 0.2;
-            top: -15px;
+            top: -20px;
         }
         li.intensidad-3:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 40px;
-            height: 40px;
-            background: #f00;
-            left: -10%;
-            border-radius: 40px;
+            width: 30px;
+            height: 30px;
+            background: #d9534f;
+            border-radius:4px 4px 0 0;
+            left: 2px;
             opacity: 0.3;
-            top: -21px;
+            top: -30px;
         }
         li.intensidad-4:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 50px;
-            height: 50px;
-            background: #f00;
-            left: -22%;
-            border-radius: 50px;
+            width: 30px;
+            height: 40px;
+            background: #d9534f;
+            border-radius:4px 4px 0 0;
+            left: 0;
             opacity: 0.4;
-            top: -25px;
+            top: -40px;
         }
         li.intensidad-5:before {
             content: " ";
             display: block;
             position: absolute;
-            width: 60px;
-            height: 60px;
-            background: #f00;
-            left: -22%;
-            border-radius: 60px;
+            width: 30px;
+            height: 50px;
+            background: #d9534f;
+            border-radius:4px 4px 0 0;
+            left: 0;
             opacity: 0.5;
-            top: -28px;
+            top: -50px;
         }
         // < ------------------------------------------------- Intensidad
         a .li.complete .status {
