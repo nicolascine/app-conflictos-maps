@@ -168,6 +168,10 @@ body {
     }
 }
 
+#menu-toggle.toggleActive {
+    transform: rotate(180deg);
+}
+
 .angular-google-map-container {
     position: absolute;
     top: 0;
