@@ -13,12 +13,12 @@
 <div class="container-time-content" ng-show='!!vm.arrayData.length'>
     <ul class="timeline-content">
         <li ng-repeat="info in vm.arrayData" id="{{info.id}}">
-            <div class="timeline-badge info"><span class="informacion"></span></div>
+            <div class="timeline-badge {{info.subType}}"><span class="{{info.subType}}"></span></div>
             <div class="timeline-panel">
                 <div class="timeline-heading">
-                    <h4 class="timeline-title">{{info.type}}</h4>
+                    <h4 class="timeline-title">{{info.subType}}</h4>
                 </div>
-                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{info.hour}} - {{info.subType}}</small></p>
+                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{info.hour}} - {{info.type}}</small></p>
                 <div class="timeline-body">
                     <div ng-if="info.image != ''">
                         <img src="assets/images/news/{{info.image}}" class="img-responsive" alt="">
