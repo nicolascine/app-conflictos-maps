@@ -1,5 +1,5 @@
 <div class="container-time-content" ng-hide='!!vm.arrayData.length'>
-    <!-- mensaje Inicio -->
+    <!-- Mensaje Inicio -->
     <div class="welcome-msg">
         <h4><strong>Revive los incidentes del 21 de mayo de 2016 en Valparaíso.<strong></h4>
         <hr>
@@ -9,25 +9,33 @@
         <p>Comience presionando alguna hora en la linea de tiempo y explore los acontecimientos cronológicamente.</p>
     </div>
 </div>
-
 <!-- Listado hitos -->
 <div class="container-time-content" ng-show='!!vm.arrayData.length'>
     <ul class="timeline-content">
         <li ng-repeat="info in vm.arrayData" id="{{info.id}}">
-            <div class="timeline-badge {{info.type}}"><span class="{{info.subType}}"></span></div>
-            <div class="timeline-panel">
-                <div class="timeline-heading">
-                    <h4 class="timeline-title">{{info.subType}}</h4>
+            <p class="panelWrapper">
+                <div class="timeline-badge {{info.type}}">
+                    <span class="{{info.subType}}"></span>
                 </div>
-                <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{info.hour}} - {{info.type}}</small></p>
-                <div class="timeline-body">
-                    <div ng-if="info.image != ''">
-                        <img src="assets/images/news/{{info.image}}" class="img-responsive" alt="">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                        <h4 class="timeline-title">{{info.subType | titleCase}}</h4>
                     </div>
-                    <p>{{info.text}}</p>
-                    <small>{{info.link}}</small>
+                    <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> {{info.hour}} - {{info.type}}</small></p>
+                    <div class="timeline-body" ng-if="info.subType != 'informacion_ciudadana'">
+                        <div ng-if="info.image != ''">
+                            <img src="assets/images/news/{{info.image}}" class="img-responsive" alt="">
+                        </div>
+                        <p>{{info.text}}</p>
+                        <small>{{info.link}}</small>
+                    </div>
+                    <div ng-else class="timeline-panel">
+                        <div class="timeline-body">
+                            <twitter-widget twitter-widget-id="'617749885933232128'"></twitter-widget>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </p>
         </li>
     </ul>
 </div>

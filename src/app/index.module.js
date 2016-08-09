@@ -11,7 +11,7 @@ import { TimeContentDirective } from '../app/components/timeContent/timeContent.
 import { TimelineDirective } from '../app/components/timeline/timeline.directive';
 import { MalarkeyDirective } from '../app/components/malarkey/malarkey.directive';
 
-angular.module('angurlarGmapBoilerplate', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'uiGmapgoogle-maps'])
+angular.module('angurlarGmapBoilerplate', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ui.router', 'ui.bootstrap', 'toastr', 'uiGmapgoogle-maps', 'ngtweet'])
     .constant('malarkey', malarkey)
     .constant('moment', moment)
     .config(config)
@@ -29,5 +29,21 @@ angular.module('angurlarGmapBoilerplate', ['ngAnimate', 'ngCookies', 'ngTouch', 
             //key: '',
             v: '3.20', //defaults to latest 3.X anyhow
             libraries: 'weather,geometry,visualization'
-        });
-    });
+        })
+    })
+    .filter('titleCase', function() {
+        return function(input) {
+            input = input || '';
+            return input.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();}).replace("_", " ")
+        };
+    })
+
+
+
+
+
+
+
+
+
+
