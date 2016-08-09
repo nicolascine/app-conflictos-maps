@@ -864,7 +864,7 @@ export class MainController {
                     "lon": -71.617087,
                     "address": "Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://www.youtube.com/watch?v=4IxskgxfCJU",
+                    "redes_sociales": "734046570946125824",
                     "Hora_fin": "13:00",
                     "intensidad": 5
                 }]
@@ -892,7 +892,7 @@ export class MainController {
                     "lon": -71.617106,
                     "address": "Pedro Montt ",
                     "media": "",
-                    "redes_sociales": "https://www.youtube.com/watch?v=cYIk37CWHsY",
+                    "redes_sociales": "734034934378205184",
                     "Hora_fin": "13:00",
                     "intensidad": 5
                 }, {
@@ -931,7 +931,7 @@ export class MainController {
                     "lon": -71.617227,
                     "address": "Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://www.youtube.com/watch?v=BDUCISVbDWI",
+                    "redes_sociales": "734037942012915712",
                     "Hora_fin": "15:00",
                     "intensidad": 5
                 }, {
@@ -1076,7 +1076,7 @@ export class MainController {
                     "lon": -71.617123,
                     "address": "Pedro Montt con Las Heras",
                     "media": "",
-                    "redes_sociales": "https://www.youtube.com/watch?v=-yPzlIAOmB4",
+                    "redes_sociales": "734045808597819392",
                     "Hora_fin": "11:50",
                     "intensidad": 5
                 }]
@@ -1168,7 +1168,7 @@ export class MainController {
                     "lon": -71.618412,
                     "address": "Pedro Montt",
                     "media": "",
-                    "redes_sociales": "https://www.youtube.com/watch?v=OnK6xE37Vgg",
+                    "redes_sociales": "734046570946125824",
                     "Hora_fin": "13:00",
                     "intensidad": 5
                 }]
@@ -1543,7 +1543,7 @@ export class MainController {
                     "lon": -71.617253,
                     "address": "Pedro Montt con Las Heras",
                     "media": "",
-                    "redes_sociales": "http://www.24liveblog.com/share/194207831?url=http://www.t13.cl/noticia/nacional/minuto-minuto-sigue-todos-detalles-esta-jornada-21-mayo",
+                    "redes_sociales": "734083498877689857",
                     "Hora_fin": "16:00",
                     "intensidad": 2
                 }]
