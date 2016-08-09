@@ -800,7 +800,7 @@ export class MainController {
             }, {
                 "Hora_ini": "10:37",
                 "markers": [{
-                    "type": "Incidentes",
+                    "type": "incidentes",
                     "subtype": "marcha",
                     "desc": "Marcha llega a su punto final. Calle Freire con Pedro Montt y comienzan a registrarse incidentes con la policía.",
                     "lat": -33.047084,
