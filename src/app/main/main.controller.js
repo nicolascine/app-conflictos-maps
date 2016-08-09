@@ -122,12 +122,21 @@ export class MainController {
     //out of constructor
     setDataInfo(info) {
         _.mapValues(info, (item) => {
-            angular.element('.timeline-content').find('li#' + item.id).removeClass('non-active').addClass('active')
-            angular.element('.timeline-content').find('li').not('#' + item.id).addClass('non-active')
-            angular.element('#sidebar-wrapper').animate({
-                scrollTop: angular.element("#" + item.id).position().top - 20,
-            }, 200);
+            if (item.id) {
+                let itemID = "#" + item.id
+                let scrollTopValue
+                if (angular.element(itemID).position()) {
+                    scrollTopValue = angular.element(itemID).position().top - 20
+                } else {
+                    scrollTopValue = 0
+                }
 
+                angular.element('.timeline-content').find('li#' + item.id).removeClass('non-active').addClass('active')
+                angular.element('.timeline-content').find('li').not('#' + item.id).addClass('non-active')
+                angular.element('#sidebar-wrapper').animate({
+                    scrollTop: scrollTopValue
+                }, 200)
+            }
         })
     }
 
